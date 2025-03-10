@@ -8,4 +8,49 @@ spriteTypes = {
 		name = "GFX_portrait_DIY_maximus_opelatus"
 		textureFile = "gfx/leaders/DIY/maximus_opelatus.tga"
 	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_demoman"
+		textureFile = "gfx/leaders/DIY/buff_demo.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_soldier"
+		textureFile = "gfx/leaders/DIY/buff_soldier.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_engineer"
+		textureFile = "gfx/leaders/DIY/buff_engineer.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_sniper"
+		textureFile = "gfx/leaders/DIY/buff_sniper.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_sniper_small"
+		textureFile = "gfx/leaders/DIY/buff_sniper_small.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_demoman_small"
+		textureFile = "gfx/leaders/DIY/buff_demo_small.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_engineer_small"
+		textureFile = "gfx/leaders/DIY/buff_engineer_small.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_spy_small"
+		textureFile = "gfx/leaders/DIY/spy_small.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_misspauling_small"
+		textureFile = "gfx/leaders/DIY/misspauling_small.tga"
+	}
 }

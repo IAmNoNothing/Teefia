@@ -18,6 +18,12 @@ set_war_support = 0.13
 
 recruit_character = DIY_great_leader
 recruit_character = DIY_maximus_opelatus
+recruit_character = DIY_demoman
+recruit_character = DIY_engineer
+recruit_character = DIY_sniper
+recruit_character = DIY_soldier
+recruit_character = DIY_spy
+recruit_character = DIY_misspauling
 
 add_ideas = economic_dependency5
 add_ideas = political_stagnation

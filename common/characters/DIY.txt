@@ -56,4 +56,141 @@ characters = {
 			}
 		}
 	}
+
+	DIY_engineer = {
+		name = DIY_engineer
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DIY_engineer
+				small = GFX_portrait_DIY_engineer_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			traits = {
+				captain_of_industry war_industrialist
+			}
+			allowed = { original_tag = DIY }
+			available = {}
+		}
+	}
+
+	DIY_soldier = {
+		name = DIY_soldier
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DIY_soldier
+				small = GFX_portrait_DIY_soldier
+			}
+		}
+
+		corps_commander = {
+			skill = 2
+			attack_skill = 10
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 8
+
+			traits = {
+				inflexible_strategist infantry_expert infantry_leader urban_assault_specialist
+			}
+		}
+	}
+
+	DIY_demoman = {
+		name = DIY_demoman
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DIY_demoman
+				small = GFX_portrait_DIY_demoman_small
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			cost = 100
+			traits = {
+				
+			}
+			modifier = {
+				army_attack_factor = 0.2
+				army_defence_factor = 0.15
+			}
+			allowed = {
+				original_tag = DIY
+			}
+			available = {
+				
+			}
+		}
+	}
+
+	DIY_sniper = {
+		name = DIY_sniper
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DIY_sniper
+				small = GFX_portrait_DIY_sniper_small
+			}
+		}
+
+		corps_commander = {
+			skill = 9
+			attack_skill = 9
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 2
+
+			traits = {
+				inflexible_strategist unyielding_defender
+			}
+		}
+	}
+
+	DIY_misspauling = {
+		name = DIY_misspauling
+		portraits = {
+			civilian = {
+				small = GFX_portrait_DIY_misspauling_small
+			}
+		}
+
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			traits = {
+				silent_workhorse
+			}
+			modifier = {
+				intelligence_agency_defense = 2.5
+			}
+		}
+	}
+
+	DIY_spy = {
+		name = DIY_spy
+		portraits = {
+			civilian = {
+				small = GFX_portrait_DIY_spy_small
+			}
+		}
+
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			traits = {
+				backroom_backstabber
+			}
+			modifier = {
+				operative_slot = 2
+				intelligence_agency_defense = 2.5
+				intel_network_gain_factor = 0.25
+				army_intel_factor = 0.15
+				navy_intel_factor = 0.15
+				airforce_intel_factor = 0.15
+			}
+		}
+	}
 }

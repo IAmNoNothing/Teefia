@@ -1198,4 +1198,22 @@ focus_tree = {
 			puppet = BUL
 		}
 	}
+
+	focus = {
+		id = DIY_prepare_eastern_front
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_integrate_ukraine
+		prerequisite = {
+			focus = DIY_integrate_ukraine
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = DIY_eastern_front_preparations
+				days = 180
+			}
+		}
+	}
 }
