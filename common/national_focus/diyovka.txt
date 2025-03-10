@@ -1,0 +1,1201 @@
+focus_tree = {
+	id = DIY_focus_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = DIY
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+	continuous_focus_position = {
+		x = 10
+		y = 2500
+	}
+
+	focus = {
+		id = DIY_diyovka_politics
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 2
+		y = 1
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = DIY_increse_paravoz_production
+		icon = GFX_focus_generic_railroad
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_diyovka_politics
+
+		prerequisite = {
+			focus = DIY_diyovka_politics
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 1488
+			}
+
+			1017 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+				add_victory_points = {
+					province = 9433
+					value = 3
+				}
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 9433
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_mass_pregnancy
+		icon = GFX_focus_chi_one_china_policy
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DIY_increse_paravoz_production
+		}
+		relative_position_id = DIY_increse_paravoz_production
+		completion_reward = { 
+			add_manpower = 10000
+			1017 = {
+				add_manpower = 15000
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_ideas = mass_pregnancy_focus
+		}
+	}
+
+	focus = {
+		id = DIY_invest_in_future
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DIY_increse_paravoz_production
+		}
+		relative_position_id = DIY_increse_paravoz_production
+		completion_reward = {
+			1017 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 3
+				add_manpower = 5000
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_military_treaty_with_albania
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DIY_mass_pregnancy
+		}
+		prerequisite = {
+			focus = DIY_invest_in_future
+		}
+		relative_position_id = DIY_invest_in_future
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ALB
+				modifier = military_treaty_with_albania
+			}
+			add_political_power = 50
+			add_war_support = 0.05
+			diplomatic_relation = {
+				country = ALB
+				relation = non_aggression_pact
+			}
+			diplomatic_relation = {
+				country = ALB
+				relation = military_access
+			}
+			diplomatic_relation = {
+				country = ALB
+				relation = offer_military_access
+			}
+			diplomatic_relation = {
+				country = ALB
+				relation = guarantee
+			}
+			ALB = {
+				diplomatic_relation = {
+					country = DIY
+					relation = guarantee
+				}
+			}
+			army_experience = 35
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				name = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_prepare_dpr_uprising
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_military_treaty_with_albania
+		}
+		relative_position_id = DIY_military_treaty_with_albania
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+			}
+			add_manpower = 10000
+			army_experience = 15
+			1018 = {
+				remove_core_of = UKR
+				add_claim_by = UKR
+				add_claim_by = DIY
+				add_resistance = 35
+			}
+			add_war_support = 0.05
+
+			IF = {
+				limit = {
+					has_idea = volunteer_only
+				}
+				swap_ideas = {
+					remove_idea = volunteer_only
+					add_idea = limited_conscription
+				}
+			}
+			ELSE = {
+				IF = {
+					limit = {
+						has_idea = limited_conscription
+					}
+					swap_ideas = {
+						remove_idea = limited_conscription
+						add_idea = extensive_conscription
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_buy_guns
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = DIY_prepare_dpr_uprising
+		prerequisite = {
+			focus = DIY_prepare_dpr_uprising
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = DIY_dpr_uprising
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		cost = 10
+		x = 0
+		y = 1
+		available = {
+			has_equipment = {
+				infantry_equipment > 2499
+			}
+			has_army_manpower = {
+				size > 34999
+			}
+		}
+		prerequisite = {
+			focus = DIY_prepare_dpr_uprising
+		}
+		relative_position_id = DIY_prepare_dpr_uprising
+		completion_reward = {
+			1018 = {
+				add_core_of = DPR
+			}
+			DPR = {
+				transfer_state = 1018
+			}
+			puppet = DPR
+			create_wargoal = {
+				target = UKR
+				type = annex_everything
+			}
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = DIY_diyovian_ukrainian_war
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		x = 0
+		y = 1
+		available = {
+			has_war_with = UKR
+		}
+		prerequisite = {
+			focus = DIY_dpr_uprising
+		}
+		relative_position_id = DIY_dpr_uprising
+		completion_reward = {
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = tot_economic_mobilisation
+					}
+				}
+
+				IF = {
+					limit = {
+						has_idea = civilian_economy
+					}
+					swap_ideas = {
+						remove_idea = civilian_economy
+						add_idea = tot_economic_mobilisation
+					}
+				}
+
+				IF = {
+					limit = {
+						has_idea = low_economic_mobilisation
+					}
+					swap_ideas = {
+						remove_idea = low_economic_mobilisation
+						add_idea = tot_economic_mobilisation
+					}
+				}
+
+				IF = {
+					limit = {
+						has_idea = partial_economic_mobilisation
+					}
+					swap_ideas = {
+						remove_idea = partial_economic_mobilisation
+						add_idea = tot_economic_mobilisation
+					}
+				}
+
+				IF = {
+					limit = {
+						has_idea = war_economy
+					}
+					swap_ideas = {
+						remove_idea = war_economy
+						add_idea = tot_economic_mobilisation
+					}
+				}
+
+				add_manpower = 10000
+				add_political_power = 50
+			}
+			ELSE = {
+				add_political_power = 150
+				add_manpower = 25000
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_peremoga
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 10
+		x = 0
+		y = 1
+		available = {
+			has_war = no
+		}
+		prerequisite = {
+			focus = DIY_diyovian_ukrainian_war
+		}
+		relative_position_id = DIY_diyovian_ukrainian_war
+
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = DIY_economic_recovery
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = DIY_increse_paravoz_production
+		}
+		relative_position_id = DIY_increse_paravoz_production
+		completion_reward = { 
+			1017 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+
+			swap_ideas = {
+				remove_idea = economic_dependency5
+				add_idea = economic_dependency4
+			}
+
+			add_political_power = 25
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = DIY_economic_recovery2
+		icon = GFX_focus_generic_steel
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = DIY_economic_recovery
+		prerequisite = {
+			focus = DIY_economic_recovery
+		}
+		completion_reward = {
+			1017 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+
+				add_extra_state_shared_building_slots = 3
+			}
+
+			swap_ideas = {
+				remove_idea = economic_dependency4
+				add_idea = economic_dependency3
+			}
+
+			add_victory_points = {
+				province = 9433
+				value = 2
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_steal_humans
+		icon = GFX_focus_generic_concessions
+		cost = 7
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_economic_recovery2
+		}
+		relative_position_id = DIY_economic_recovery2
+		completion_reward = {
+			1018 = {
+				add_manpower = -25000
+			}
+			add_political_power = -25
+
+			1017 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_manpower = 25000
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_local_oil_industries
+		icon = GFX_goal_generic_oil_refinery
+		cost = 7
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_steal_humans
+		}
+		relative_position_id = DIY_steal_humans
+		available = {
+			has_tech = fuel_silos
+		}
+		completion_reward = {
+			1017 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			swap_ideas = {
+				remove_idea = economic_dependency3
+				add_idea = economic_dependency2
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_military_industry
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = DIY_local_oil_industries
+		prerequisite = {
+			focus = DIY_local_oil_industries
+		}
+		completion_reward = {
+			1017 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = DIY_autarky
+		icon = GFX_focus_GER_autarky_achieved
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = DIY_military_industry
+		prerequisite = {
+			focus = DIY_military_industry
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
+			1017 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_manpower = 5000
+			}
+			swap_ideas = {
+				remove_idea = economic_dependency2
+				add_idea = autarky
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_integrate_dpr
+		icon = GFX_goal_demand_sudetenland
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = DIY_peremoga
+		prerequisite = {
+			focus = DIY_autarky
+		}
+		prerequisite = {
+			focus = DIY_peremoga
+		}
+		completion_reward = {
+			annex_country = {
+				target = DPR
+			}
+			1018 = {
+				add_core_of = DIY
+			}
+			add_victory_points = {
+				province = 9433
+				value = 5
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_integrate_ukraine
+		icon = GFX_focus_GER_integrated_economies
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_integrate_dpr
+		prerequisite = {
+			focus = DIY_integrate_dpr
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = DIY_albanian_trade_union
+		icon = GFX_focus_chi_army_reform
+		cost = 5
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = DIY_military_treaty_with_albania
+		}
+		relative_position_id = DIY_military_treaty_with_albania
+		completion_reward = {
+			ALB = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_ideas = albanian_trade_union
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_political_power = 50
+			add_ideas = albanian_trade_union
+		}
+	}
+
+	focus = {
+		id = DIY_alliance_with_albania
+		icon = GFX_goal_generic_alliance
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_albanian_trade_union
+		}
+		relative_position_id = DIY_albanian_trade_union
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = DIY_faction_name
+			add_to_faction = ALB
+		}
+	}
+
+	focus = {
+		id = DIY_military_training
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = DIY_alliance_with_albania
+		prerequisite = {
+			focus = DIY_alliance_with_albania
+		}
+		prerequisite = {
+			focus = DIY_path_to_allies
+		}
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 25
+			add_ideas = proffesional_army
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				name = land_doctrine
+			}
+
+			ALB = {
+				add_political_power = 50
+				army_experience = 25
+				add_ideas = proffesional_army
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					name = land_doctrine
+				}
+			}
+
+			ROM = {
+				81 = {
+					damage_building = {
+						type = infrastructure
+						damage = 2
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_political_reforms
+		icon = GFX_goal_generic_propaganda
+		cost = 5
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = DIY_increse_paravoz_production
+		}
+		relative_position_id = DIY_increse_paravoz_production
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+
+			swap_ideas = {
+				remove_idea = political_stagnation
+				add_idea = political_reform
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_plurality
+		icon = GFX_goal_support_democracy
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = DIY_political_reforms
+		prerequisite = {
+			focus = DIY_political_reforms
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = plurality_reforms
+				days = 180
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = DIY_diplomatic_effort
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DIY_political_reforms
+		}
+		relative_position_id = DIY_political_reforms
+		completion_reward = {
+			1017 = {
+				add_building_construction = {
+					type = nuclear_facility
+					level = 1
+					instant_build = yes
+					province = 9433
+				}
+			}
+			add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_nuclear
+			}
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 1
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_beurocracy_reform
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 5
+		x = 1
+		y = 1
+		available = {
+			NOT = {
+				has_idea = plurality_reforms
+			}
+		}
+		prerequisite = {
+			focus = DIY_plurality
+		}
+		prerequisite = {
+			focus = DIY_diplomatic_effort
+		}
+		relative_position_id = DIY_plurality
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = political_reform
+				add_idea = political_reform2
+			}
+			add_manpower = -228
+			GER = {
+				add_manpower = 228
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_educational_reform
+		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
+		cost = 5
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = DIY_economic_recovery
+		}
+		relative_position_id = DIY_economic_recovery
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = educational_reform
+		}
+	}
+
+	focus = {
+		id = DIY_new_schools
+		icon = GFX_focus_research
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_educational_reform
+		}
+		relative_position_id = DIY_educational_reform
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = educational_reform
+				add_idea = educational_reform2
+			}
+			add_victory_points = {
+				province = 9433
+				value = 3
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_invite_foreign_scientists
+		icon = GFX_focus_research2
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_new_schools
+		}
+		relative_position_id = DIY_new_schools
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = educational_reform2
+				add_idea = educational_reform3
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				uses = 2
+				bonus = 0.5
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_airforce
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
+		x = 2
+		y = 0
+		relative_position_id = DIY_invite_foreign_scientists
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				uses = 2
+				bonus = 0.5
+				category = plane_modules_tech
+			}
+			add_tech_bonus = {
+				name = fighter_bonus
+				uses = 2
+				bonus = 0.5
+				category = light_fighter
+			}
+			1017 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			air_experience = 25
+		}
+	}
+
+	focus = {
+		id = DIY_bomb_donbas
+		icon = GFX_focus_rocketry
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = DIY_invite_foreign_scientists
+		available = {
+			controls_state = 1018
+		}
+		prerequisite = {
+			focus = DIY_invite_foreign_scientists
+		}
+		prerequisite = {
+			focus = DIY_airforce
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				uses = 1
+				bonus = 14.88
+				category = rocketry
+			}
+
+			1018 = {
+				add_building_construction = {
+					type = air_facility
+					level = 1
+					province = 11437
+				}
+			}
+
+			add_political_power = 50
+
+			add_breakthrough_progress = {
+				value = 5
+				specialization = specialization_air
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_jets
+		icon = GFX_focus_generic_jet_planes
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_bomb_donbas
+		}
+		relative_position_id = DIY_bomb_donbas
+		completion_reward = {
+			add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_air
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_domestic_plane_production
+		icon = GFX_goal_expand_the_luftwaffe
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_autarky
+		}
+		prerequisite = {
+			focus = DIY_jets
+		}
+		relative_position_id = DIY_jets
+		completion_reward = {
+			add_ideas = domestic_plane_production
+		}
+	}
+
+	focus = {
+		id = DIY_fleet
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5
+		x = 10
+		y = 0
+		available = {
+			any_controlled_state = {
+				is_coastal = yes
+			}
+		}
+		relative_position_id = DIY_diyovka_politics
+		completion_reward = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				name = naval_doc_bonus
+				uses = 4
+				category = naval_doctrine
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_path_to_allies
+		icon = GFX_goal_generic_military_deal
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_beurocracy_reform
+		}
+		prerequisite = {
+			focus = DIY_albanian_trade_union
+		}
+		relative_position_id = DIY_beurocracy_reform
+		completion_reward = {
+			IF = {
+				limit = {
+					UKR = {
+						exists = yes
+						NOT = {
+							is_puppet_of = DIY
+							has_war_with = DIY
+						}
+					}
+				}
+				diplomatic_relation = {
+					country = UKR
+					relation = military_access
+				}
+				ALB = {
+					diplomatic_relation = {
+						country = UKR
+						relation = military_access
+					}
+				}
+			}
+			diplomatic_relation = {
+				country = ROM
+				relation = military_access
+			}
+			diplomatic_relation = {
+				country = YUG
+				relation = military_access
+			}
+			ALB = {
+				diplomatic_relation = {
+					country = ROM
+					relation = military_access
+				}
+				diplomatic_relation = {
+					country = YUG
+					relation = military_access
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_split_balkans
+		icon = GFX_goal_generic_territory_or_war
+		cost = 5
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = DIY_military_training
+		}
+		prerequisite = {
+			focus = DIY_peremoga
+		}
+		relative_position_id = DIY_military_training
+		completion_reward = {
+			army_experience = 25
+			every_country = {
+				limit = {
+					has_guaranteed = ROM
+				}
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+			every_country = {
+				limit = {
+					has_guaranteed = YUG
+				}
+				diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_attack_romania
+		icon = GFX_focus_generic_attack_romania
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DIY_split_balkans
+		}
+		mutually_exclusive = {
+			focus = DIY_befriend_romania
+		}
+		relative_position_id = DIY_split_balkans
+		completion_reward = {
+			create_wargoal = {
+				target = ROM
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_befriend_romania
+		icon = GFX_focus_invite_romania
+		cost = 5
+		x = -1
+		y = 1
+		mutually_exclusive = {
+			focus = DIY_attack_romania
+		}
+		prerequisite = {
+			focus = DIY_split_balkans
+		}
+		relative_position_id = DIY_split_balkans
+		completion_reward = {
+			add_to_faction = ROM
+		}
+	}
+
+	focus = {
+		id = DIY_attack_yugoslavia
+		icon = GFX_focus_generic_attack_yugoslavia
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_attack_romania
+		mutually_exclusive = {
+			focus = DIY_befriend_yugoslavia
+		}
+		prerequisite = {
+			focus = DIY_attack_romania
+			focus = DIY_befriend_romania
+		}
+		completion_reward = { }
+	}
+
+	focus = {
+		id = DIY_befriend_yugoslavia
+		icon = GFX_focus_invite_yugoslavia
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_befriend_romania
+		mutually_exclusive = {
+			focus = DIY_attack_yugoslavia
+		}
+		prerequisite = {
+			focus = DIY_attack_romania
+			focus = DIY_befriend_romania
+		}
+		completion_reward = { }
+	}
+
+	focus = {
+		id = DIY_bulgarian_ultimatum
+		icon = GFX_focus_generic_attack_bulgaria
+		cost = 5
+		x = -1
+		y = 1
+		available = {
+			has_army_manpower = {
+				size > 99999
+			}
+		}
+		relative_position_id = DIY_attack_yugoslavia
+		prerequisite = {
+			focus = DIY_attack_yugoslavia
+			focus = DIY_befriend_yugoslavia
+		}
+		completion_reward = {
+			puppet = BUL
+		}
+	}
+}

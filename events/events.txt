@@ -1,0 +1,28 @@
+add_namespace = diyovka
+
+# ultimatum to bulgaria
+country_event = {
+	id = diyovka.1
+	title = diyovka.1.t
+	desc = diyovka.1.d
+	picture = GFX_report_event_bulgarian_soldiers
+	is_triggered_only = yes
+
+	option = { # yes
+		name = diyovka.1.a
+		DIY = {
+			puppet = BUL
+		}
+		ai_chance = { base = 10 }
+	}
+	option = { # no
+		name = diyovka.1.b
+		DIY = {
+			create_wargoal = {
+				target = BUL
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}

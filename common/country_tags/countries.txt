@@ -1,0 +1,2 @@
+DIY = "countries/Diyovka.txt"
+DPR = "countries/DPR.txt"

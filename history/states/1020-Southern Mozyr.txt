@@ -1,0 +1,29 @@
+state={
+	id=1020
+	name="STATE_1020"
+	provinces={
+		6232 6556 9554 11453 
+	}
+
+	history={
+		owner = UKR
+		add_claim_by = SOV
+		add_core_of = UKR
+		add_core_of = BLR
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+
+		victory_points = {
+			6232 1
+		}
+	}
+
+	state_category = rural
+	manpower=230902
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

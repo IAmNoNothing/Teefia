@@ -1,0 +1,340 @@
+DIY_buy_guns = {
+	# inf eq
+	DIY_buy_infantry_equipment_ger = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {}
+		available = {
+			has_opinion = {
+				target = GER
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = GER
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		targets = {
+			GER
+		}
+	}
+
+	DIY_buy_infantry_equipment_eng = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {}
+		available = {
+			has_opinion = {
+				target = ENG
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = ENG
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		targets = {
+			ENG
+		}
+	}
+
+	DIY_buy_infantry_equipment_sov = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {}
+		available = {
+			has_opinion = {
+				target = SOV
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = SOV
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		targets = {
+			SOV
+		}
+	}
+
+	DIY_buy_infantry_equipment_usa = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {}
+		available = {
+			has_opinion = {
+				target = USA
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = USA
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		targets = {
+			USA
+		}
+	}
+
+	# support
+	DIY_buy_support_equipment_ger = {
+		icon = GFX_decision_generic_protection
+		visible = {}
+		available = {
+			has_opinion = {
+				target = GER
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 75
+				producer = GER
+			}
+		}
+		targets = {
+			GER
+		}
+	}
+
+	DIY_buy_support_equipment_eng = {
+		icon = GFX_decision_generic_protection
+		visible = {}
+		available = {
+			has_opinion = {
+				target = ENG
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 75
+				producer = ENG
+			}
+		}
+		targets = {
+			ENG
+		}
+	}
+
+	DIY_buy_support_equipment_sov = {
+		icon = GFX_decision_generic_protection
+		visible = {}
+		available = {
+			has_opinion = {
+				target = SOV
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 75
+				producer = SOV
+			}
+		}
+		targets = {
+			SOV
+		}
+	}
+
+	DIY_buy_support_equipment_usa = {
+		icon = GFX_decision_generic_protection
+		visible = {}
+		available = {
+			has_opinion = {
+				target = USA
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 75
+				producer = USA
+			}
+		}
+		targets = {
+			USA
+		}
+	}
+
+	# artillery
+	DIY_buy_artillery_ger = {
+		icon = GFX_decision_ger_military_buildup
+		visible = {}
+		available = {
+			has_opinion = {
+				target = GER
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 75
+				producer = GER
+			}
+		}
+		targets = {
+			GER
+		}
+	}
+
+	DIY_buy_artillery_eng = {
+		icon = GFX_decision_ger_military_buildup
+		visible = {}
+		available = {
+			has_opinion = {
+				target = ENG
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 75
+				producer = ENG
+			}
+		}
+		targets = {
+			ENG
+		}
+	}
+
+	DIY_buy_artillery_sov = {
+		icon = GFX_decision_ger_military_buildup
+		visible = {}
+		available = {
+			has_opinion = {
+				target = SOV
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 75
+				producer = SOV
+			}
+		}
+		targets = {
+			SOV
+		}
+	}
+
+	DIY_buy_artillery_usa = {
+		icon = GFX_decision_ger_military_buildup
+		visible = {}
+		available = {
+			has_opinion = {
+				target = USA
+				value > 49
+			}
+			num_of_available_civilian_factories > 0
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 75
+				producer = USA
+			}
+		}
+		targets = {
+			USA
+		}
+	}
+}

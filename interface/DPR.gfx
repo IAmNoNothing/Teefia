@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_DPR_yaiko_tryas"
+		textureFile = "gfx/leaders/DPR/yaiko_tryas.tga"
+	}
+}

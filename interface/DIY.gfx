@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_DIY_character"
+		texturefile = "gfx/leaders/DIY/andriy_the_great.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_maximus_opelatus"
+		textureFile = "gfx/leaders/DIY/maximus_opelatus.tga"
+	}
+}

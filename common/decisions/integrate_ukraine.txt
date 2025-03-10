@@ -1,0 +1,198 @@
+DIY_integrate_ukraine_dec_cat = {
+	DIY_integrate_ukraine_puppet = {
+		icon = GFX_decision_generic_form_nation
+		visible = {
+			has_subject = UKR
+		}
+		available = {
+			has_subject = UKR
+		}
+		remove_effect = {
+			annex_country = {
+				target = UKR
+			}
+		}
+		cost = 100
+		days_remove = 30
+	}
+
+	DIY_integrate_192 = {
+		icon = GFX_decision_generic_form_nation
+		visible = {}
+		available = {
+			controls_state = 192
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			192 = {
+				add_core_of = DIY	
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 192
+			}
+		}
+	}
+
+	DIY_integrate_1020 = {
+		icon = GFX_decision_generic_form_nation
+		visible = {}
+		available = {
+			controls_state = 1020
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			1020 = {
+				add_core_of = DIY
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1020
+			}
+		}
+	}
+
+	DIY_integrate_197 = {
+		icon = GFX_decision_generic_form_nation
+		visible = {}
+		available = {
+			controls_state = 197
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			197 = {
+				add_core_of = DIY
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 197
+			}
+		}
+	}
+	
+	DIY_integrate_198 = {
+		icon = GFX_decision_generic_form_nation
+		visible = {}
+		available = {
+			controls_state = 198
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			198 = {
+				add_core_of = DIY
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 198
+			}
+		}
+	}
+	
+	DIY_integrate_199 = {
+		icon = GFX_decision_generic_form_nation
+		visible = {}
+		available = {
+			controls_state = 199
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			199 = {
+				add_core_of = DIY
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 199
+			}
+		}
+	}
+	
+	DIY_integrate_201 = {
+		icon = GFX_decision_generic_form_nation
+		visible = {}
+		available = {
+			controls_state = 201
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			201 = {
+				add_core_of = DIY
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 201
+			}
+		}
+	}
+	
+	DIY_integrate_202 = {
+		icon = GFX_decision_generic_form_nation
+		visible = {}
+		available = {
+			controls_state = 202
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			202 = {
+				add_core_of = DIY
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 202
+			}
+		}
+	}
+	
+	DIY_integrate_203 = {
+		icon = GFX_decision_generic_form_nation
+		visible = {}
+		available = {
+			controls_state = 203
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			203 = {
+				add_core_of = DIY
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 203
+			}
+		}
+	}
+	
+	DIY_integrate_834 = {
+		icon = GFX_decision_generic_form_nation
+		visible = {}
+		available = {
+			controls_state = 834
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			834 = {
+				add_core_of = DIY
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 834
+			}
+		}
+	}
+}

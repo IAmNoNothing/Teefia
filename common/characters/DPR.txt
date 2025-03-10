@@ -1,0 +1,16 @@
+characters = {
+	DPR_yaiko_tryas = {
+		name = DPR_yaiko_tryas
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DPR_yaiko_tryas
+			}
+		}
+		country_leader = {
+			ideology = moderatism
+			traits = {
+				empire_builder
+			}
+		}
+	}
+}

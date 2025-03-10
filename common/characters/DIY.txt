@@ -1,0 +1,59 @@
+characters = {
+	DIY_great_leader = {
+		name = DIY_great_leader
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DIY_character
+			}
+		}
+		country_leader = {
+			ideology = moderatism
+			traits = {
+				dislikes_germany
+			}
+		}
+	}
+	DIY_maximus_opelatus = {
+		name = DIY_maximus_opelatus
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DIY_maximus_opelatus
+			}
+		}
+		corps_commander = {
+			skill = 6
+			attack_skill = 7
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 8
+			traits = {
+				infantry_expert infantry_leader engineer_officer
+			}
+		}
+	}
+
+	DIY_yaiko_tryas = {
+		name = DPR_yaiko_tryas
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DPR_yaiko_tryas
+			}
+		}
+		
+		corps_commander = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 6
+			logistics_skill = 7
+			traits = {
+				trait_engineer infantry_expert infantry_leader brilliant_strategist
+			}
+			visible = {
+				DPR = {
+					exists = no
+				}
+			}
+		}
+	}
+}
