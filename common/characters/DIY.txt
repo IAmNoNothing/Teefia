@@ -96,6 +96,12 @@ characters = {
 			traits = {
 				inflexible_strategist infantry_expert infantry_leader urban_assault_specialist
 			}
+
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
 		}
 	}
 
@@ -190,6 +196,22 @@ characters = {
 				army_intel_factor = 0.15
 				navy_intel_factor = 0.15
 				airforce_intel_factor = 0.15
+			}
+		}
+	}
+
+	DIY_krivosheev = {
+		name = DIY_krivosheev
+		portraits = {
+			civilian = {
+				large = GFX_krivosheev
+			}
+		}
+
+		country_leader = {
+			ideology = leninism
+			traits = {
+				dictator great_war_hero DIY_hates_india
 			}
 		}
 	}

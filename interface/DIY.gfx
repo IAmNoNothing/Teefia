@@ -53,4 +53,19 @@ spriteTypes = {
 		name = "GFX_portrait_DIY_misspauling_small"
 		textureFile = "gfx/leaders/DIY/misspauling_small.tga"
 	}
+
+	spriteType = {
+		name = "GFX_focus_knife"
+		textureFile = "gfx/leaders/DIY/knife.tga"
+	}
+
+	spriteType = {
+		name = "GFX_krivosheev"
+		textureFile = "gfx/leaders/DIY/krivosheev.tga"
+	}
+
+	spriteType = {
+		name = "GFX_krivosheev_knife"
+		textureFile = "gfx/leaders/DIY/krivosheev_knife.tga"
+	}
 }

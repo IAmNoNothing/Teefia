@@ -1,28 +1,212 @@
 add_namespace = diyovka
 
-# ultimatum to bulgaria
+# ask soviets to join comintern
 country_event = {
 	id = diyovka.1
 	title = diyovka.1.t
 	desc = diyovka.1.d
-	picture = GFX_report_event_bulgarian_soldiers
+	
+	picture = GFX_report_event_soviet_japanese_pact
+
+	trigger = {
+		
+	}
+
 	is_triggered_only = yes
 
 	option = { # yes
 		name = diyovka.1.a
-		DIY = {
-			puppet = BUL
+		SOV = {
+			add_to_faction = DIY
+			1017 = {
+				remove_core_of = SOV
+				remove_claim_by = SOV
+			}
 		}
-		ai_chance = { base = 10 }
+		add_political_power = 50
+		ai_chance = {
+			base = 10
+		}
+		DIY = {
+			country_event = diyovka.2
+		}
 	}
 	option = { # no
 		name = diyovka.1.b
+ 		ai_chance = {
+			base = 0
+		}
 		DIY = {
-			create_wargoal = {
-				target = BUL
-				type = puppet_wargoal_focus
+			country_event = diyovka.3
+		}
+	}
+}
+
+country_event = {
+	id = diyovka.2
+	title = diyovka.2.t
+	desc = diyovka.2.d
+	trigger = {
+		
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = diyovka.2.a
+	}
+}
+
+country_event = {
+	id = diyovka.3
+	title = diyovka.3.t
+	desc = diyovka.3.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = {
+		name = diyovka.3.a
+	}
+}
+
+# ask ussr for ukraine
+
+country_event = {
+	id = diyovka.4
+	title = diyovka.4.t
+	desc = diyovka.4.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = { # yes
+		name = diyovka.4.a
+
+		SOV = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						is_core_of = UKR
+						is_claimed_by = UKR
+					}
+				}
+				transfer_state_to = DIY
+				add_core_of = DIY
 			}
 		}
-		ai_chance = { base = 0 }
+		
+		DIY = {
+			country_event = diyovka.5
+		}
+
+		ai_chance = { base = 10 }
+	}
+
+	option = {
+		name = diyovka.4.b
+		DIY = {
+			country_event = diyovka.6
+		}
+		ai_chance = { base = 0}
+	}
+}
+
+country_event = {
+	id = diyovka.5
+	title = diyovka.5.t
+	desc = diyovka.5.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = {
+		name = diyovka.5.a
+	}
+}
+
+country_event = {
+	id = diyovka.6
+	title = diyovka.6.t
+	desc = diyovka.6.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = {
+		name = diyovka.6.a
+	}
+}
+
+# ask for polish ukraine
+
+country_event = {
+	id = diyovka.7
+	title = diyovka.7.t
+	desc = diyovka.7.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = {
+		name = diyovka.7.a
+
+		97 = {
+			owner = {
+				every_controlled_state = {
+					limit = {
+						is_core_of = UKR
+					}
+					transfer_state_to = DIY
+					add_core_of = DIY
+				}
+			}
+		}
+
+		ai_chance = { base = 10 }
+
+		country_event = diyovka.8
+	}
+	option = {
+		ai_chance = { base = 1 }
+
+		name = diyovka.7.b
+
+		97 = {
+			owner = {
+				DIY = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+						generator = {
+							97 89 93
+						}
+					}
+				}
+			}
+		}
+
+		DIY = {
+			country_event = diyovka.9
+		}
+	}
+}
+
+country_event = {
+	id = diyovka.8
+	title = diyovka.8.t
+	desc = diyovka.8.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = {
+		name = diyovka.8.a
+	}
+}
+
+country_event = {
+	id = diyovka.9
+	title = diyovka.9.t
+	desc = diyovka.9.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = {
+		name = diyovka.9.a
 	}
 }

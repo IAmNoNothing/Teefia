@@ -1,0 +1,5 @@
+leader_traits = {
+	DIY_hates_india = {
+		random = no
+	}
+}
