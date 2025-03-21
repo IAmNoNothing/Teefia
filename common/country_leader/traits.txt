@@ -2,4 +2,12 @@ leader_traits = {
 	DIY_hates_india = {
 		random = no
 	}
+
+	DIY_master_of_explosives = {
+		random = 0
+
+		army_attack_factor = 0.15
+		army_defence_factor = 0.1
+		experience_gain_army = 0.3
+	}
 }

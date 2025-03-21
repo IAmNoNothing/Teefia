@@ -1432,6 +1432,7 @@ focus_tree = {
 					}
 				}
 			}
+			army_experience = 25
 		}
 	}
 
@@ -1457,11 +1458,6 @@ focus_tree = {
 			create_wargoal = {
 				target = UKR
 				type = annex_everything
-			}
-			UKR = {
-				every_controlled_state = {
-					add_core_of = DIY
-				}
 			}
 		}
 	}
@@ -1584,7 +1580,7 @@ focus_tree = {
 	focus = {
 		id = DIY_begin_collectivisation
 		icon = GFX_goal_generic_soviet_construction
-		cost = 5
+		cost = 7
 		x = -5
 		y = 1
 		prerequisite = {
@@ -1603,7 +1599,7 @@ focus_tree = {
 			add_stability = 0.025
 			add_timed_idea = {
 				idea = DIY_collectivisation
-				years = 2
+				years = 3
 			}
 			swap_ideas = {
 				remove_idea = economic_dependency5
@@ -1615,7 +1611,7 @@ focus_tree = {
 	focus = {
 		id = DIY_fast_industrialisation
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 5
+		cost = 7
 		x = 0
 		y = 1
 		prerequisite = {
@@ -1674,7 +1670,7 @@ focus_tree = {
 	focus = {
 		id = DIY_request_soviet_help
 		icon = GFX_goal_support_communism
-		cost = 5
+		cost = 7
 		x = 0
 		y = 1
 		relative_position_id = DIY_fast_industrialisation
@@ -1684,7 +1680,7 @@ focus_tree = {
 		available = {
 			has_opinion = {
 				target = SOV
-				value = 50
+				value > 49
 			}
 		}
 		completion_reward = {
@@ -1741,7 +1737,7 @@ focus_tree = {
 	focus = {
 		id = DIY_force_collectivisation
 		icon = GFX_goal_generic_political_pressure
-		cost = 5
+		cost = 7
 		x = 1
 		y = 1
 		relative_position_id = DIY_request_soviet_help
@@ -1802,7 +1798,7 @@ focus_tree = {
 	focus = {
 		id = DIY_leave_as_it_is
 		icon = GFX_goal_generic_improve_relations
-		cost = 5
+		cost = 7
 		x = -1
 		y = 1
 		relative_position_id = DIY_request_soviet_help
@@ -1818,11 +1814,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
+			add_political_power = 100
+			add_stability = 0.1
 			add_popularity = {
 				ideology = communism
-				popularity = 0.05
+				popularity = 0.1
 			}
 		}
 	}
@@ -1830,7 +1826,7 @@ focus_tree = {
 	focus = {
 		id = DIY_communist_military_innovations
 		icon = GFX_focus_generic_socialist_science
-		cost = 5
+		cost = 7
 		x = 1
 		y = 1
 		relative_position_id = DIY_leave_as_it_is
@@ -1878,7 +1874,7 @@ focus_tree = {
 	focus = {
 		id = DIY_finish_collectivisation
 		icon = GFX_focus_generic_communist_industry
-		cost = 5
+		cost = 7
 		x = 0
 		y = 1
 		relative_position_id = DIY_communist_military_innovations

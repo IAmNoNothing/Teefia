@@ -9,7 +9,7 @@ characters = {
 		country_leader = {
 			ideology = moderatism
 			traits = {
-				dislikes_germany
+				dislikes_germany the_legitimist
 			}
 		}
 	}
@@ -50,9 +50,7 @@ characters = {
 				trait_engineer infantry_expert infantry_leader brilliant_strategist
 			}
 			visible = {
-				DPR = {
-					exists = no
-				}
+				exists = no
 			}
 		}
 	}
@@ -118,16 +116,24 @@ characters = {
 			slot = army_chief
 			cost = 100
 			traits = {
-				
-			}
-			modifier = {
-				army_attack_factor = 0.2
-				army_defence_factor = 0.15
+				DIY_master_of_explosives
 			}
 			allowed = {
 				original_tag = DIY
 			}
 			available = {
+				
+			}
+		}
+
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 3
+
+			traits = {
 				
 			}
 		}
@@ -146,7 +152,7 @@ characters = {
 			skill = 9
 			attack_skill = 9
 			defense_skill = 3
-			planning_skill = 5
+			planning_skill = 4
 			logistics_skill = 2
 
 			traits = {

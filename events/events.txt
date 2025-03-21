@@ -90,7 +90,6 @@ country_event = {
 					}
 				}
 				transfer_state_to = DIY
-				add_core_of = DIY
 			}
 		}
 		
@@ -153,7 +152,6 @@ country_event = {
 						is_core_of = UKR
 					}
 					transfer_state_to = DIY
-					add_core_of = DIY
 				}
 			}
 		}
