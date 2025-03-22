@@ -67,7 +67,9 @@ characters = {
 				trait_engineer infantry_expert infantry_leader brilliant_strategist
 			}
 			visible = {
-				exists = no
+				DIY = {
+					has_completed_focus = DIY_integrate_dpr
+				}
 			}
 		}
 	}
@@ -88,7 +90,9 @@ characters = {
 				captain_of_industry war_industrialist
 			}
 			allowed = { original_tag = DIY }
-			available = {}
+			available = {
+				always = yes
+			}
 		}
 	}
 
@@ -196,6 +200,12 @@ characters = {
 				intelligence_agency_defense = 2.5
 				political_advisor_cost_factor = -0.1
 			}
+			available = {
+				always = yes
+			}
+			visible = {
+				always = yes
+			}
 		}
 	}
 
@@ -220,6 +230,13 @@ characters = {
 				army_intel_factor = 0.15
 				navy_intel_factor = 0.15
 				airforce_intel_factor = 0.15
+			}
+
+			available = {
+				always = yes
+			}
+			visible = {
+				always = yes
 			}
 		}
 	}
@@ -257,6 +274,12 @@ characters = {
 			traits = {
 				DIY_king_of_albania
 			}
+			available = {
+				always = yes
+			}
+			visible = {
+				always = yes
+			}
 		}
 	}
 
@@ -280,6 +303,12 @@ characters = {
 				experience_loss_factor = -0.5
 				army_defence_factor = 0.05
 				breakthrough_factor = 0.1
+			}
+			available = {
+				always = yes
+			}
+			visible = {
+				always = yes
 			}
 		}
 	}
