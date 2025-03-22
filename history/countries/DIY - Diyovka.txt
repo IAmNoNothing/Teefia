@@ -25,6 +25,8 @@ recruit_character = DIY_soldier
 recruit_character = DIY_spy
 recruit_character = DIY_misspauling
 recruit_character = DIY_krivosheev
+recruit_character = DIY_zogu
+recruit_character = DIY_medic
 
 add_ideas = economic_dependency5
 add_ideas = political_stagnation

@@ -68,4 +68,19 @@ spriteTypes = {
 		name = "GFX_krivosheev_knife"
 		textureFile = "gfx/leaders/DIY/krivosheev_knife.tga"
 	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_character_small"
+		textureFile = "gfx/leaders/DIY/buff_engineer_2.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_small_zogu"
+		textureFile = "gfx/leaders/DIY/king_zog_small.tga"
+	}
+
+	spriteType = {
+		name = "GFX_buff_medic"
+		textureFile = "gfx/leaders/DIY/mge_medic.tga"
+	}
 }

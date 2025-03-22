@@ -129,11 +129,40 @@ ideas = {
 			}
 		}
 
-		political_reform2 = {
+		com_political_reform = {
 			picture = generic_king_handled
 			name = political_reform
 
 			modifier = {
+				communism_drift = 0.01
+				neutrality_drift = -0.01
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_power_factor = -0.1
+				political_advisor_cost_factor = 0.2
+			}
+		}
+
+		political_reform2 = {
+			picture = hol_the_foundations_of_defense
+			name = political_reform
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		com_political_reform2 = {
+			picture = hol_the_foundations_of_defense
+			name = political_reform
+
+			modifier = {
+				communism_drift = 0.03
+				neutrality_drift = -0.03
 				stability_factor = 0.05
 				war_support_factor = 0.05
 				political_power_factor = 0.05
@@ -187,6 +216,20 @@ ideas = {
 
 			modifier = {
 				research_speed_factor = 0.08
+			}
+		}
+
+		DIY_monarchy_is_no_more = {
+			picture = generic_communist_army
+			name = DIY_monarchy_is_no_more
+
+			modifier = {
+				communism_drift = 0.03
+				party_popularity_stability_factor = 0.15
+				offensive_war_stability_factor = 0.1
+				war_support_factor = 0.05
+				command_power_gain_mult = 0.1
+				max_command_power = 25
 			}
 		}
 
@@ -310,7 +353,7 @@ ideas = {
 				neutrality_drift = 0.01
 				stability_factor = -0.1
 				war_support_factor = -0.1
-				political_power_factor = -0.075
+				political_power_factor = -0.1
 			}
 		}
 

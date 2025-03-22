@@ -4,12 +4,29 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_portrait_DIY_character
+				small = GFX_portrait_DIY_character_small
 			}
 		}
 		country_leader = {
 			ideology = moderatism
 			traits = {
 				dislikes_germany the_legitimist
+			}
+		}
+
+		advisor = {
+			visible = {
+				has_completed_focus = DIY_free_king
+			}
+			slot = political_advisor
+			traits = {
+				the_legitimist
+			}
+			modifier = {
+				neutrality_drift = 0.01
+				stability_factor = 0.1
+				political_power_cost = 0.1
+				research_speed_factor = 0.075
 			}
 		}
 	}
@@ -177,6 +194,7 @@ characters = {
 			}
 			modifier = {
 				intelligence_agency_defense = 2.5
+				political_advisor_cost_factor = -0.1
 			}
 		}
 	}
@@ -196,7 +214,7 @@ characters = {
 				backroom_backstabber
 			}
 			modifier = {
-				operative_slot = 2
+				operative_slot = 1
 				intelligence_agency_defense = 2.5
 				intel_network_gain_factor = 0.25
 				army_intel_factor = 0.15
@@ -218,6 +236,50 @@ characters = {
 			ideology = leninism
 			traits = {
 				dictator great_war_hero DIY_hates_india
+			}
+		}
+	}
+
+	DIY_zogu = {
+		name = ALB_king_zog
+		portraits = {
+			civilian = {
+				large = GFX_portrait_King_Zog
+				small = GFX_portrait_small_zogu
+			}
+		}
+
+		advisor = {
+			visible = {
+				has_cosmetic_tag = DIY_ADU
+			}
+			slot = political_advisor
+			traits = {
+				DIY_king_of_albania
+			}
+		}
+	}
+
+	DIY_medic = {
+		name = DIY_medic
+		portraits = {
+			civilian = {
+				small = GFX_buff_medic
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			traits = {
+				medicine_consumer
+			}
+			cost = 150
+			modifier = {
+				weekly_manpower = 500
+				org_loss_when_moving = -0.2
+				experience_loss_factor = -0.5
+				army_defence_factor = 0.05
+				breakthrough_factor = 0.1
 			}
 		}
 	}

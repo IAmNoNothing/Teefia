@@ -97,7 +97,38 @@ country_event = {
 			country_event = diyovka.5
 		}
 
-		ai_chance = { base = 10 }
+		ai_chance = { base = 3 }
+	}
+
+	option = {
+		name = diyovka.4.c
+
+		SOV = {
+			196 = {
+				transfer_state_to = DIY
+			}
+			200 = {
+				transfer_state_to = DIY
+			}
+			226 = {
+				transfer_state_to = DIY
+			}
+			259 = {
+				transfer_state_to = DIY
+			}
+			1019 = {
+				transfer_state_to = DIY
+			}
+			193 = {
+				transfer_state_to = DIY
+			}
+		}
+
+		DIY = {
+			country_event = diyovka.10
+		}
+
+		ai_chance = { base = 7 }
 	}
 
 	option = {
@@ -206,5 +237,88 @@ country_event = {
 
 	option = {
 		name = diyovka.9.a
+	}
+}
+
+country_event = {
+	id = diyovka.10
+	title = diyovka.10.t
+	desc = diyovka.10.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = {
+		name = diyovka.10.a
+	}
+}
+
+# albano-ukrainian union
+
+country_event = {
+	id = diyovka.11
+	title = diyovka.11.t
+	desc = diyovka.11.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = { # yes
+		name = diyovka.11.a
+		DIY = {
+			country_event = diyovka.12
+		}
+		ai_chance = { base = 10 }
+	}
+	option = { # no
+		name = diyovka.11.b
+		DIY = {
+			country_event = diyovka.13
+		}
+		ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = diyovka.12
+	title = diyovka.12.t
+	desc = diyovka.12.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = {
+		name = diyovka.12.a
+		annex_country = {
+			target = ALB
+		}
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+
+country_event = {
+	id = diyovka.13
+	title = diyovka.13.t
+	desc = diyovka.13.d
+	is_triggered_only = yes
+	trigger = {}
+
+	option = { # nothing
+		name = diyovka.13.a
+	}
+	option = { # go to war
+		name = diyovka.13.b
+		create_wargoal = {
+			target = ALB
+			type = annex_everything
+		}
+		ALB = {
+			leave_faction = yes
+		}
+		ITA = {
+			diplomatic_relation = {
+				country = ALB
+				relation = guarantee
+				active = no
+			}
+		}
 	}
 }

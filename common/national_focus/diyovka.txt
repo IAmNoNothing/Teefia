@@ -695,6 +695,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_war_support = 0.1
+			custom_effect_tooltip = DIY_unlock_decisions_to_core_ukr
 		}
 	}
 
@@ -796,6 +797,28 @@ focus_tree = {
 						damage = 2
 					}
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_albano_diyovian_union
+		icon = GFX_focus_generic_befriend_albania
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = DIY_military_training
+		prerequisite = {
+			focus = DIY_military_training
+		}
+		available = {
+			any_allied_country = {
+				tag = ALB
+			}
+		}
+		completion_reward = {
+			ALB = {
+				country_event = diyovka.11
 			}
 		}
 	}
@@ -1155,14 +1178,14 @@ focus_tree = {
 		icon = GFX_goal_generic_territory_or_war
 		cost = 5
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = {
-			focus = DIY_military_training
+			focus = DIY_albano_diyovian_union
 		}
 		prerequisite = {
 			focus = DIY_peremoga
 		}
-		relative_position_id = DIY_military_training
+		relative_position_id = DIY_albano_diyovian_union
 		completion_reward = {
 			army_experience = 25
 			every_country = {
@@ -1241,7 +1264,12 @@ focus_tree = {
 			focus = DIY_attack_romania
 			focus = DIY_befriend_romania
 		}
-		completion_reward = { }
+		completion_reward = {
+			create_wargoal = {
+				target = YUG
+				type = puppet_wargoal_focus
+			}
+		}
 	}
 
 	focus = {
@@ -1258,7 +1286,9 @@ focus_tree = {
 			focus = DIY_attack_romania
 			focus = DIY_befriend_romania
 		}
-		completion_reward = { }
+		completion_reward = {
+			add_to_faction = YUG
+		}
 	}
 
 	focus = {
@@ -1370,6 +1400,38 @@ focus_tree = {
 	}
 
 	focus = {
+		id = DIY_steal_knife
+		icon = GFX_focus_knife
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_negotiations_with_ussr
+		prerequisite = {
+			focus = DIY_negotiations_with_ussr
+		}
+		completion_reward = {
+			add_stability = -0.01
+			add_war_support = 0.05
+			1017 = {
+				add_manpower = -1
+			}
+			DIY_krivosheev = {
+				set_portraits = {
+					civilian = {
+						large = GFX_krivosheev_knife
+					}
+				}
+			}
+			army_experience = 25
+
+			swap_ideas = {
+				remove_idea = political_stagnation
+				add_idea = com_political_reform
+			}
+		}
+	}
+
+	focus = {
 		id = DIY_more_men
 		icon = GFX_focus_generic_military_academy
 		cost = 5
@@ -1410,33 +1472,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = DIY_steal_knife
-		icon = GFX_focus_knife
-		cost = 5
-		x = 0
-		y = 1
-		relative_position_id = DIY_negotiations_with_ussr
-		prerequisite = {
-			focus = DIY_negotiations_with_ussr
-		}
-		completion_reward = {
-			add_stability = -0.01
-			add_war_support = 0.05
-			1017 = {
-				add_manpower = -1
-			}
-			DIY_krivosheev = {
-				set_portraits = {
-					civilian = {
-						large = GFX_krivosheev_knife
-					}
-				}
-			}
-			army_experience = 25
-		}
-	}
-
-	focus = {
 		id = DIY_attack_ukraine
 		icon = GFX_focus_POL_ukrainian_army
 		cost = 5
@@ -1458,33 +1493,6 @@ focus_tree = {
 			create_wargoal = {
 				target = UKR
 				type = annex_everything
-			}
-		}
-	}
-
-	focus = {
-		id = DIY_get_polish_ukraine
-		icon = GFX_focus_generic_attack_poland
-		cost = 5
-		x = -1
-		y = 1
-		relative_position_id = DIY_kanon_event
-		prerequisite = {
-			focus = DIY_kanon_event
-		}
-		prerequisite = {
-			focus = DIY_attack_ukraine
-		}
-		available = {
-			NOT = {
-				has_war_with = UKR
-			}
-		}
-		completion_reward = {
-			91 = {
-				owner = {
-					country_event = diyovka.7
-				}
 			}
 		}
 	}
@@ -1517,21 +1525,28 @@ focus_tree = {
 	}
 
 	focus = {
-		id = DIY_ask_for_ukraine
-		icon = GFX_focus_GER_alliance_with_the_ussr
-		cost = 10
-		x = 1
+		id = DIY_get_polish_ukraine
+		icon = GFX_focus_generic_attack_poland
+		cost = 5
+		x = -1
 		y = 1
-		relative_position_id = DIY_get_closer_with_kremlin
+		relative_position_id = DIY_kanon_event
 		prerequisite = {
-			focus = DIY_get_closer_with_kremlin
+			focus = DIY_kanon_event
 		}
 		prerequisite = {
 			focus = DIY_attack_ukraine
 		}
+		available = {
+			NOT = {
+				has_war_with = UKR
+			}
+		}
 		completion_reward = {
-			SOV = {
-				country_event = diyovka.4
+			91 = {
+				owner = {
+					country_event = diyovka.7
+				}
 			}
 		}
 	}
@@ -1573,6 +1588,26 @@ focus_tree = {
 			add_victory_points = {
 				province = 9433
 				value = 15
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_ask_for_ukraine
+		icon = GFX_focus_GER_alliance_with_the_ussr
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = DIY_get_closer_with_kremlin
+		prerequisite = {
+			focus = DIY_get_closer_with_kremlin
+		}
+		prerequisite = {
+			focus = DIY_attack_ukraine
+		}
+		completion_reward = {
+			SOV = {
+				country_event = diyovka.4
 			}
 		}
 	}
@@ -1962,6 +1997,11 @@ focus_tree = {
 			}
 			add_war_support = 0.25
 			add_stability = 0.05
+			custom_effect_tooltip = DIY_unlock_decisions_to_core_ukr
+			swap_ideas = {
+				remove_idea = com_political_reform
+				add_idea = com_political_reform2
+			}
 		}
 	}
 
@@ -1986,6 +2026,58 @@ focus_tree = {
 				}
 			}
 			add_stability = 0.25
+		}
+	}
+
+	focus = {
+		id = DIY_kill_the_king
+		icon = GFX_focus_NOR_send_the_king_back_to_denmark
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = DIY_kanon_event
+		prerequisite = {
+			focus = DIY_kanon_event
+		}
+		mutually_exclusive = {
+			focus = DIY_free_king
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DIY_king_imprisoned
+				add_idea = DIY_monarchy_is_no_more
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_stability = -0.05
+			add_political_power = -50
+		}
+	}
+
+	focus = {
+		id = DIY_free_king
+		icon = GFX_focus_hun_elect_a_king
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = DIY_kanon_event
+		mutually_exclusive = {
+			focus = DIY_kill_the_king
+		}
+		prerequisite = {
+			focus = DIY_kanon_event
+		}
+		completion_reward = {
+			remove_ideas = DIY_king_imprisoned
+			add_political_power = 50
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_stability = 0.05
+			custom_effect_tooltip = DIY_king_will_be_avaiable
 		}
 	}
 }

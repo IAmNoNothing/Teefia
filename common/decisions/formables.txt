@@ -1,0 +1,33 @@
+DIY_form_new_nation = {
+	DIY_albania_diyovka = {
+		icon = GFX_decision_generic_form_nation
+		cost = 0
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1017
+				state = 934
+				state = 44
+				state = 805
+			}
+		}
+		available = {
+			controls_state = 1017
+			controls_state = 934
+			controls_state = 44
+			controls_state = 805
+		}
+		complete_effect = {
+			934 = {
+				add_core_of = DIY
+			}
+			44 = {
+				add_core_of = DIY
+			}
+			805 = {
+				add_core_of = DIY
+			}
+			set_cosmetic_tag = DIY_ADU
+		}
+	}
+}
