@@ -275,10 +275,7 @@ characters = {
 				DIY_king_of_albania
 			}
 			available = {
-				always = yes
-			}
-			visible = {
-				always = yes
+				has_cosmetic_tag = DIY_ADU
 			}
 		}
 	}
