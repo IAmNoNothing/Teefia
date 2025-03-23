@@ -1,0 +1,14 @@
+characters = {
+	UKR_POTUJNIY_PENETRAT = {
+		name = UKR_POTUJNIY_PENETRAT
+		portraits = {
+			civilian = {
+				large = gfx_portrait_UKR
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			
+		}
+	}
+}
