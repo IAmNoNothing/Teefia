@@ -83,4 +83,19 @@ spriteTypes = {
 		name = "GFX_buff_medic"
 		textureFile = "gfx/leaders/DIY/mge_medic.tga"
 	}
+
+	spriteType = {
+		name = "GFX_portrait_DIY_character_small_shared"
+		textureFile = "gfx/leaders/DIY/shared_engineer.tga"
+	}
+
+	spriteType = {
+		name = "GFX_milk"
+		textureFile = "gfx/other/milk.tga"
+	}
+
+	spriteType = {
+		name = "GFX_shariy_large"
+		textureFile = "gfx/leader/DIY/shariy.tga"
+	}
 }

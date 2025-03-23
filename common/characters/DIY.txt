@@ -17,7 +17,7 @@ characters = {
 		advisor = {
 			idea_token = DIY_great_leader
 			visible = {
-				has_completed_focus = DIY_free_king
+				has_country_flag = king_freed
 			}
 			slot = political_advisor
 			traits = {
@@ -31,6 +31,50 @@ characters = {
 			}
 		}
 	}
+
+	DIY_shared_great_leader = {
+		name = DIY_shared_great_leader
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DIY_character
+				small = GFX_portrait_DIY_character_small_shared
+			}
+		}
+
+		advisor = {
+			idea_token = DIY_shared_great_leader
+			visible = {
+				has_country_flag = king_shared
+			}
+			slot = political_advisor
+			traits = {
+				shared_king
+			}
+			modifier = {
+				neutrality_drift = 0.01
+				stability_factor = 0.1
+				political_power_cost = 0.1
+				research_speed_factor = 0.075
+			}
+		}
+	}
+
+	DIY_shariy = {
+		name = DIY_shariy
+		portraits = {
+			civilian = {
+				large = GFX_shariy_large
+			}
+		}
+
+		country_leader = {
+			ideology = nazism
+			traits = {
+				shares
+			}
+		}
+	}
+
 	DIY_maximus_opelatus = {
 		name = DIY_maximus_opelatus
 		portraits = {

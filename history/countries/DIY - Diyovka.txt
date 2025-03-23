@@ -18,6 +18,41 @@ set_war_support = 0.13
 
 load_oob = DIY_1936
 
+set_variable = {
+	var = DIY_sharing_stability
+	value = 0
+}
+
+set_variable = {
+	var = DIY_sharing_weekly_manpower
+	value = 0
+}
+
+set_variable = {
+	var = DIY_sharing_building_speed
+	value = 0
+}
+
+set_variable = {
+	var = DIY_sharing_factory_output
+	value = 0
+}
+
+set_variable = {
+	var = DIY_sharing_dockyard_output
+	value = 0
+}
+
+set_variable = {
+	var = DIY_sharing_consumer_goods
+	value = 0
+}
+
+set_variable = {
+	var = DIY_sharing_pp
+	value = 0
+}
+
 recruit_character = DIY_great_leader
 recruit_character = DIY_maximus_opelatus
 recruit_character = DIY_demoman

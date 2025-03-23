@@ -30,4 +30,19 @@ leader_traits = {
 		army_org_factor = 0.1
 		army_org_regain = 0.1
 	}
+
+	shared_king = {
+		random = no
+
+		political_power_gain = -0.05
+		monthly_population = 0.1
+	}
+
+	shares = {
+		random = no
+
+		monthly_population = 0.5
+		political_power_gain = 0.1
+		experience_loss_factor = -0.25
+	}
 }

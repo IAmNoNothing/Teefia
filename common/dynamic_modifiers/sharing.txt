@@ -1,5 +1,5 @@
 DIY_sharing_dm = {
-	icon = generic_manpower_bonus
+	icon = GFX_milk
 	enable = {
 		has_government = fascism
 	}
@@ -8,7 +8,9 @@ DIY_sharing_dm = {
 			has_government = fascism
 		}
 	}
-	political_power_gain = var:DIY_sharing_stability
+
+	political_power_gain = var:DIY_sharing_pp
+	stability_factor = var:DIY_sharing_stability
 	weekly_manpower = var:DIY_sharing_weekly_manpower
 	production_speed_buildings_factor = var:DIY_sharing_building_speed
 	industrial_capacity_factory = var:DIY_sharing_factory_output

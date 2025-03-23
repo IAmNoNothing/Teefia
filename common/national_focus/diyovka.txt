@@ -2044,18 +2044,33 @@ focus_tree = {
 		relative_position_id = DIY_kanon_event
 		prerequisite = {
 			focus = DIY_kanon_event
+			focus = DIY_more_sharing_of_king
 		}
 		mutually_exclusive = {
 			focus = DIY_free_king
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = DIY_king_imprisoned
-				add_idea = DIY_monarchy_is_no_more
+			IF = {
+				limit = {
+					has_idea = DIY_king_imprisoned
+				}
+				swap_ideas = {
+					remove_idea = DIY_king_imprisoned
+					add_idea = DIY_monarchy_is_no_more
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
 			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
+			ELSE_IF = {
+				limit = {
+					has_idea = DIY_ultra_sharing_king
+				}
+				swap_ideas = {
+					remove_idea = DIY_ultra_sharing_king
+					add_idea = DIY_sharing_necrophilia
+				}
 			}
 			add_stability = -0.05
 			add_political_power = -50
@@ -2074,15 +2089,31 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = DIY_kanon_event
+			focus = DIY_more_sharing_of_king
 		}
 		completion_reward = {
-			remove_ideas = DIY_king_imprisoned
-			add_political_power = 50
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
+			IF = {
+				limit = {
+					has_idea = DIY_king_imprisoned
+				}
+				remove_ideas = DIY_king_imprisoned
+				add_political_power = 50
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+				add_stability = 0.05
+				set_country_flag = king_freed
 			}
-			add_stability = 0.05
+			ELSE_IF = {
+				limit = {
+					has_idea = DIY_ultra_sharing_king
+				}
+				remove_ideas = DIY_ultra_sharing_king
+				add_political_power = -50
+				add_stability = 0.05
+				set_country_flag = king_shared
+			}
 			custom_effect_tooltip = DIY_king_will_be_avaiable
 		}
 	}
@@ -2177,14 +2208,96 @@ focus_tree = {
 		prerequisite = {
 			focus = DIY_start_sharing_political_elites
 		}
+		mutually_exclusive = {
+			focus = DIY_share_individuals
+		}
 		relative_position_id = DIY_start_sharing_political_elites
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_war_support = 0.05
+			add_to_variable = {
+				var = DIY_sharing_weekly_manpower
+				value = 250
+			}
+			# todo: should unlock decisions to increase weekly manpower
+		}
+	}
+
+	focus = {
+		id = DIY_share_individuals
+		icon = GFX_focus_CZE_german_puppet
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = DIY_start_sharing_political_elites
+		prerequisite = {
+			focus = DIY_start_sharing_political_elites
+		}
+		mutually_exclusive = {
+			focus = DIY_share_everyone
+		}
 		completion_reward = {
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.05
 			}
-			add_stability = 0.1
-			add_war_support = 0.05
+			add_stability = 0.05
+			add_war_support = 0.1
+			add_to_variable = {
+				var = DIY_sharing_stability
+				value = 0.05
+			}
+			add_to_variable = {
+				var = DIY_sharing_pp
+				value = 0.05
+			}
+			# todo: add decisions to increase stability and pp gain
+		}
+	}
+
+	focus = {
+		id = DIY_personal_king_sex_slave
+		icon = GFX_focus_rom_abdicate
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = DIY_share_everyone
+		prerequisite = {
+			focus = DIY_share_everyone
+			focus = DIY_share_individuals
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			add_ideas = DIY_sharing_king
+		}
+	}
+
+	focus = {
+		id = DIY_more_sharing_of_king
+		icon = GFX_goal_tfv_saf_support_ossebrandwag
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_personal_king_sex_slave
+		prerequisite = {
+			focus = DIY_personal_king_sex_slave
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			swap_ideas = {
+				remove_idea = DIY_sharing_king
+				add_idea = DIY_ultra_sharing_king
+			}
 		}
 	}
 }
