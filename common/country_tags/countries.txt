@@ -1,2 +1,3 @@
 DIY = "countries/Diyovka.txt"
 DPR = "countries/DPR.txt"
+UKR = "countries/UKR.txt"
