@@ -1714,9 +1714,11 @@ focus_tree = {
 			focus = DIY_fast_industrialisation
 		}
 		available = {
-			has_opinion = {
-				target = SOV
-				value > 49
+			SOV = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
 		}
 		completion_reward = {
