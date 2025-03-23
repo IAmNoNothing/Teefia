@@ -1,0 +1,17 @@
+DIY_sharing_dm = {
+	icon = generic_manpower_bonus
+	enable = {
+		has_government = fascism
+	}
+	remove_trigger = {
+		NOT = {
+			has_government = fascism
+		}
+	}
+	political_power_gain = var:DIY_sharing_stability
+	weekly_manpower = var:DIY_sharing_weekly_manpower
+	production_speed_buildings_factor = var:DIY_sharing_building_speed
+	industrial_capacity_factory = var:DIY_sharing_factory_output
+	industrial_capacity_dockyard = var:DIY_sharing_dockyard_output
+	consumer_goods_factor = var:DIY_sharing_consumer_goods
+}

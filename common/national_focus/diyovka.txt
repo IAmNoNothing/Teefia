@@ -44,6 +44,7 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = DIY_invite_communists
+			focus = DIY_return_of_free_elections
 		}
 
 		completion_reward = {
@@ -1347,6 +1348,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = DIY_increse_paravoz_production
+			focus = DIY_return_of_free_elections
 		}
 		completion_reward = {
 			add_popularity = {
@@ -2082,6 +2084,107 @@ focus_tree = {
 			}
 			add_stability = 0.05
 			custom_effect_tooltip = DIY_king_will_be_avaiable
+		}
+	}
+
+	###
+	### FASCISM
+	###
+
+	focus = {
+		id = DIY_return_of_free_elections
+		icon = GFX_focus_generic_democratic_europe
+		cost = 5
+		x = 10
+		y = 0
+		relative_position_id = DIY_invite_communists
+		prerequisite = {
+			focus = DIY_diyovka_politics
+		}
+		mutually_exclusive = {
+			focus = DIY_invite_communists
+			focus = DIY_increse_paravoz_production
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.05
+			}
+			add_political_power = 50
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = DIY_win_of_sharing
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10
+		x = -3
+		y = 1
+		relative_position_id = DIY_return_of_free_elections
+		prerequisite = {
+			focus = DIY_return_of_free_elections
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_stability = -0.05
+			add_war_support = 0.05
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_start_sharing_political_elites
+		icon = GFX_focus_SOV_womens_fascist_movement
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_win_of_sharing
+		prerequisite = {
+			focus = DIY_win_of_sharing
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = political_stagnation
+				add_idea = political_reform
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_share_everyone
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DIY_start_sharing_political_elites
+		}
+		relative_position_id = DIY_start_sharing_political_elites
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_stability = 0.1
+			add_war_support = 0.05
 		}
 	}
 }

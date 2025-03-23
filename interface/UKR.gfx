@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "gfx_portrait_UKR"
+		textureFile = "gfx/leaders/UKR/penetrat.tga"
+	}
+}
