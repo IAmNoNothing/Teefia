@@ -8,7 +8,7 @@ DIY_buy_guns = {
 				target = GER
 				value > 49
 			}
-			num_of_available_civilian_factories > 0
+			
 		}
 		cost = 15
 		days_remove = 30

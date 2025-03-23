@@ -726,4 +726,134 @@ DIY_core_ukraine = {
             }
         }
     }
+
+    DIY_integrate_240 = {
+        icon = GFX_decision_generic_form_nation
+        fire_only_once = yes
+        visible = {
+            OR = {
+                has_completed_focus = DIY_recreate_volyn_riznya
+                has_completed_focus = DIY_integrate_ukraine
+            }
+        }
+        available = {
+            controls_state = 240
+        }
+        cost = 30
+        days_remove = 30
+        remove_effect = {
+            240 = {
+                add_core_of = DIY
+            }
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 240
+            }
+        }
+    }
+
+    DIY_integrate_220 = {
+        icon = GFX_decision_generic_form_nation
+        fire_only_once = yes
+        visible = {
+            OR = {
+                has_completed_focus = DIY_recreate_volyn_riznya
+                has_completed_focus = DIY_integrate_ukraine
+            }
+        }
+        available = {
+            controls_state = 220
+        }
+        cost = 30
+        days_remove = 30
+        remove_effect = {
+            220 = {
+                add_core_of = DIY
+            }
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 220
+            }
+        }
+    }
+
+    DIY_integrate_1020 = {
+        icon = GFX_decision_generic_form_nation
+        fire_only_once = yes
+        visible = {
+            OR = {
+                has_completed_focus = DIY_recreate_volyn_riznya
+                has_completed_focus = DIY_integrate_ukraine
+            }
+        }
+        available = {
+            controls_state = 1020
+        }
+        cost = 30
+        days_remove = 30
+        remove_effect = {
+            1020 = {
+                add_core_of = DIY
+            }
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 1020
+            }
+        }
+    }
+
+    DIY_integrate_194 = {
+        icon = GFX_decision_generic_form_nation
+        fire_only_once = yes
+        visible = {
+            OR = {
+                has_completed_focus = DIY_recreate_volyn_riznya
+                has_completed_focus = DIY_integrate_ukraine
+            }
+        }
+        available = {
+            controls_state = 194
+        }
+        cost = 30
+        days_remove = 30
+        remove_effect = {
+            194 = {
+                add_core_of = DIY
+            }
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 194
+            }
+        }
+    }
+
+    DIY_integrate_78 = {
+        icon = GFX_decision_generic_form_nation
+        fire_only_once = yes
+        visible = {
+            OR = {
+                has_completed_focus = DIY_recreate_volyn_riznya
+                has_completed_focus = DIY_integrate_ukraine
+            }
+        }
+        available = {
+            controls_state = 78
+        }
+        cost = 30
+        days_remove = 30
+        remove_effect = {
+            78 = {
+                add_core_of = DIY
+            }
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 78
+            }
+        }
+    }
 }
