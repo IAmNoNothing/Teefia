@@ -10,43 +10,42 @@ focus_tree = {
 
 	default = no
 
-	focus = {#думаю це нормальні бафи
-		id = UKR_dergava_ponad_yse
+	focus = {
+		id = UKR_nasha_doroga
 		icon = GFX_SOV_soviet_atomic_bomb_project_ccp_2d_sov_compatibility
 		x = 6
 		y = 0
 		cost = 10
 		completion_reward = {
 			add_political_power = 50
-			add_stability = 0.05
-			add_war_support = 0.10
 			}
 		}
 
 
 	focus = {
-		id = UKR_separ_proplem
+		id = UKR_our_problems
 		icon = GFX_SOV_reinstitute_the_mestnichestvo_ccp_2d_sov_compatibility
 		x = 5.5
 		y = 1
 		cost = 5
 		prerequisite = {
-			focus = UKR_dergava_ponad_yse
+			focus = UKR_nasha_doroga
 		}
 		completion_reward = {
-			add_manpower = -3000
-			add_stability = -0.02
+			add_manpower = -30000
+			add_stability = -0.05
 			DIY = {
-				add_manpower = 3000
+				add_manpower = 30000
 			}
 		}
 	}
 	focus = {
-		id = UKR_politic_reanimation
+		id = UKR_ua_dreams
 		icon = ]
 		cost = 5
 		prerequisite = {
-			focus = UKR_dergava_ponad_yse}
+			focus = UKR_nasha_doroga
+		}
 		x = 7.5
 		y = 1
 		completion_reward = { 
