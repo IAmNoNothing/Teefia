@@ -1,0 +1,17 @@
+focus_tree = {
+	id = UKR_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = UKR
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = DPR_sosati_fabrici
+		icon = GFX_goal_continuous_reduce_training_time
+}
+}
