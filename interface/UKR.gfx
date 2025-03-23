@@ -1,6 +1,6 @@
 spriteTypes = {
 	spriteType = {
-		name = "gfx_portrait_UKR"
+		name = "GFX_portrait_UKR_penetrat_democracy"
 		textureFile = "gfx/leaders/UKR/penetrat_democracy.tga"
 	}
 }

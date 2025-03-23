@@ -96,6 +96,6 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_shariy_large"
-		textureFile = "gfx/leader/DIY/shariy.tga"
+		textureFile = "gfx/leaders/DIY/shariy.tga"
 	}
 }

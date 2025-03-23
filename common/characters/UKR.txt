@@ -3,11 +3,11 @@ characters = {
 		name = UKR_POTUJNIY_PENETRAT
 		portraits = {
 			civilian = {
-				large = gfx_portrait_UKR
+				large = GFX_portrait_UKR_penetrat_democracy
 			}
 		}
 		country_leader = {
-			ideology = conservatism
+			ideology = despotism
 			
 		}
 	}

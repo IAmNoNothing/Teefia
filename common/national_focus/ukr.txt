@@ -6,20 +6,20 @@ focus_tree = {
 			add = 100
 			original_tag = UKR
 		}
-	}
+			}
 
 	default = no
 
 	focus = {
 		id = UKR_nasha_doroga
-		icon = GFX_SOV_soviet_atomic_bomb_project_ccp_2d_sov_compatibility
+		icon = x
 		x = 6
 		y = 0
 		cost = 10
 		completion_reward = {
 			add_political_power = 50
 			}
-		}
+			}
 
 
 	focus = {
@@ -38,7 +38,7 @@ focus_tree = {
 				add_manpower = 30000
 			}
 		}
-	}
+			}
 	focus = {
 		id = UKR_ua_dreams
 		icon = ]
@@ -49,11 +49,234 @@ focus_tree = {
 		x = 7.5
 		y = 1
 		completion_reward = { 
-			
+			set_rule = {
+				can_join_factions = no
+						}
+			set_research_slots = 1
+			201 ={ 
+				add_building_construction = {
+				type = infrastructure
+				level = 5
+			}
+				}
+			199 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					}
+
+				}
+			1018 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					}
+
+			}
+			203 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					}
+			}
+			202 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					}
+			}
+			192 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					}
+			}
+			197 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					}
+			}
+			834 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					}
+			}
+			198 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					}
+			}
+			1020 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					}
+			}
+	}
+			}
+	focus = {
+		id = UKR_prom_reload
+		icon = gfx_portrait_UKR
+		cost = 10
+		x = 10
+		y = 0
+		completion_reward = { }
+
+			}
+	focus = {
+		id = UKR_svoi_sered_shujih
+		icon = GFX_EMI_NOR_rikstanken_turret
+		cost = 10
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = UKR_nasha_doroga
+		}
+		available = {
+			has_manpower < 30000
+		}
+		completion_reward = { 
+			add_manpower = 50000
+		}
+			}
+	focus = {
+		id = UKR_ukranian_road
+		icon = GFX_EMI_NOR_rikstanken_turret
+		x = 6
+		y =2
+		prerequisite = {
+			focus = UKR_our_problems
+			focus = UKR_ua_dreams
+				}
+			completion_reward = {
+				1018 = {
+					set_demilitarized_zone = yes
+				}
+				203 = {
+					set_demilitarized_zone = yes
+				}	
+			    197 = {
+					set_demilitarized_zone = yes
+				}
+
+
+			}
+	}
+	focus = {
+		id = UKR_tumbocka_moment
+		icon = [
+		cost = 20
+		x = 10
+		y = 1
+		prerequisite = {
+			focus = UKR_prom_reload
+		}
+		completion_reward = { 
+
 		}
 	}
+	focus = {
+		id = UKR_nationalization_of_industry
+		icon = [
+		cost = 10
+		x = 12
+		y = 1
+		prerequisite = {
+			focus = UKR_prom_reload
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = UKR_dergavny_vkladennya
+		icon = x
+		cost = 10
+		x = 14
+		y = 1
+		prerequisite = {
+			focus = UKR_prom_reload
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = UKR_usa_grants
+		icon = x
+		cost = 10
+		x = 16
+		y = 1
+		prerequisite = {
+			focus = UKR_prom_reload
+		}
+		completion_reward = { }
+	}
 
-
-
+	focus = {
+			id = UKR_novi_technologies
+			icon = x
+			cost = 10
+			x = 10
+			y = 2
+			prerequisite = { 
+				focus = UKR_tumbocka_moment
+			}
+			completion_reward = { }
+	}
+	focus = {
+		id = UKR_diferent_roads
+		icon = x
+		cost = 10
+		x = 8
+		y = 3
+		prerequisite = { 
+			focus = UKR_ukranian_road
+		}
+		prerequisite = { 
+			focus = UKR_novi_technologies
+		}
+		completion_reward = { 
+			kill_ideology_leader = democratic
+		}
+	}
+	focus = {
+		id = UKR_democratic_road
+		icon = x
+		cost = 70
+		x = 7
+		y = 4
+		prerequisite = { 
+			focus = UKR_diferent_roads
+		}
+		completion_reward = { 
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+	}
+	focus = {
+		id = UKR_degenerat_road
+		icon = x
+		cost = 30
+		x = 9
+		y = 4
+		prerequisite = { 
+			focus = UKR_diferent_roads
+		}
+		completion_reward = { 
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+		}
+	}
 }
-
