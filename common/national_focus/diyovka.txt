@@ -16,16 +16,17 @@ focus_tree = {
 		y = 2500
 	}
 
-	focus = {
-		id = DIY_diyovka_politics
-		icon = GFX_focus_generic_support_the_left_right
-		cost = 5
+	focus = { # наприклад:
+		id = DIY_diyovka_politics # айді
+		icon = GFX_focus_generic_support_the_left_right # іконка
+		cost = 5 # 35 днів
 		x = 2
 		y = 1
+		# немає умови виконання або залежностей від інших фокусів
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-			add_war_support = 0.05
+			add_political_power = 50 # +50 політки
+			add_stability = 0.05 # +5% стабільності
+			add_war_support = 0.05 # +5% вар саппорта
 		}
 	}
 

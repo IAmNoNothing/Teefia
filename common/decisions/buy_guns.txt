@@ -4,11 +4,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_generic_prepare_civil_war
 		visible = {}
 		available = {
-			has_opinion = {
-				target = GER
-				value > 49
+			GER = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -32,11 +34,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_generic_prepare_civil_war
 		visible = {}
 		available = {
-			has_opinion = {
-				target = ENG
-				value > 49
+			ENG = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -60,11 +64,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_generic_prepare_civil_war
 		visible = {}
 		available = {
-			has_opinion = {
-				target = SOV
-				value > 49
+			SOV = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -88,11 +94,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_generic_prepare_civil_war
 		visible = {}
 		available = {
-			has_opinion = {
-				target = USA
-				value > 49
+			USA = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -117,11 +125,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_generic_protection
 		visible = {}
 		available = {
-			has_opinion = {
-				target = GER
-				value > 49
+			GER = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -145,11 +155,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_generic_protection
 		visible = {}
 		available = {
-			has_opinion = {
-				target = ENG
-				value > 49
+			ENG = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -173,11 +185,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_generic_protection
 		visible = {}
 		available = {
-			has_opinion = {
-				target = SOV
-				value > 49
+			SOV = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -201,11 +215,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_generic_protection
 		visible = {}
 		available = {
-			has_opinion = {
-				target = USA
-				value > 49
+			USA = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -230,11 +246,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_ger_military_buildup
 		visible = {}
 		available = {
-			has_opinion = {
-				target = GER
-				value > 49
+			GER = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -258,11 +276,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_ger_military_buildup
 		visible = {}
 		available = {
-			has_opinion = {
-				target = ENG
-				value > 49
+			ENG = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -286,11 +306,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_ger_military_buildup
 		visible = {}
 		available = {
-			has_opinion = {
-				target = SOV
-				value > 49
+			SOV = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
@@ -314,11 +336,13 @@ DIY_buy_guns = {
 		icon = GFX_decision_ger_military_buildup
 		visible = {}
 		available = {
-			has_opinion = {
-				target = USA
-				value > 49
+			USA = {
+				has_opinion = {
+					target = DIY
+					value > 49
+				}
 			}
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 		}
 		cost = 15
 		days_remove = 30
