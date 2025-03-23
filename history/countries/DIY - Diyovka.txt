@@ -16,6 +16,8 @@ set_popularities = {
 set_stability = 0.25
 set_war_support = 0.13
 
+load_oob = DIY_1936
+
 recruit_character = DIY_great_leader
 recruit_character = DIY_maximus_opelatus
 recruit_character = DIY_demoman
