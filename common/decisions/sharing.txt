@@ -1,0 +1,323 @@
+DIY_sharing_people = {
+	DIY_share_diyovka = {
+		icon = GFX_decision_generic_research
+		fire_only_once = yes
+		cost = 75
+		days_remove = 60
+
+		visible = {
+			has_completed_focus = DIY_share_ukrainian_children
+		}
+
+		available = {
+			controls_state = 1017
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1017
+			}
+		}
+
+		complete_effect = {
+			1017 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1.5
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			1017 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+				add_victory_points = {
+					province = 9433
+					value = 3
+				}
+			}
+			add_to_variable = {
+				var = DIY_sharing_research
+				value = 0.025
+			}
+		}
+	}
+
+	DIY_share_center = {
+		icon = GFX_decision_generic_research
+		fire_only_once = yes
+		cost = 75
+		days_remove = 60
+
+		visible = {
+			has_completed_focus = DIY_share_ukrainian_children
+		}
+
+		available = {
+			controls_state = 1018
+			controls_state = 197
+			controls_state = 203
+			controls_state = 192
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1018
+				state = 197
+				state = 203
+				state = 192
+			}
+		}
+
+		complete_effect = {
+			1018 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1
+					}
+				}
+			}
+			197 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1
+					}
+				}
+			}
+			203 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1
+					}
+				}
+			}
+			192 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = DIY_sharing_research
+				value = 5
+			}
+		}
+
+		remove_effect = {
+			1018 = {
+				add_core_of = DIY
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			197 = {
+				add_core_of = DIY
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			203 = {
+				add_core_of = DIY
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			192 = {
+				add_core_of = DIY
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_victory_points = {
+				province = 9433
+				value = 1
+			}
+			add_to_variable = {
+				var = DIY_sharing_research
+				value = 0.1
+			}
+		}
+	}
+
+	DIY_share_north = {
+		icon = GFX_decision_generic_research
+		fire_only_once = yes
+		cost = 75
+		days_remove = 60
+
+		visible = {
+			has_completed_focus = DIY_share_ukrainian_children
+		}
+
+		available = {
+			controls_state = 202
+			controls_state = 201
+			controls_state = 1020
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1020
+				state = 202
+				state = 201
+			}
+		}
+
+		complete_effect = {
+			1020 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1
+					}
+				}
+			}
+			202 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1
+					}
+				}
+			}
+			201 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			1020 = {
+				add_core_of = DIY
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			201 = {
+				add_core_of = DIY
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			202 = {
+				add_core_of = DIY
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_victory_points = {
+				province = 9433
+				value = 1
+			}
+			add_to_variable = {
+				var = DIY_sharing_research
+				value = 0.075
+			}
+		}
+	}
+
+	DIY_share_west = {
+		icon = GFX_decision_generic_research
+		fire_only_once = yes
+		cost = 75
+		days_remove = 60
+
+		visible = {
+			has_completed_focus = DIY_share_ukrainian_children
+		}
+
+		available = {
+			controls_state = 834
+			controls_state = 198
+			controls_state = 199
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 834
+				state = 198
+				state = 199
+			}
+		}
+
+		complete_effect = {
+			834 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1
+					}
+				}
+			}
+			198 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1
+					}
+				}
+			}
+			199 = {
+				add_state_modifier = {
+					modifier = {
+						monthly_population = 1
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			834 = {
+				add_core_of = DIY
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			198 = {
+				add_core_of = DIY
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			199 = {
+				add_core_of = DIY
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_victory_points = {
+				province = 9433
+				value = 1
+			}
+			add_to_variable = {
+				var = DIY_sharing_research
+				value = 0.075
+			}
+		}
+	}
+}

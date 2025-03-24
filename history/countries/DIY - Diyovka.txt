@@ -53,6 +53,11 @@ set_variable = {
 	value = 0
 }
 
+set_variable = {
+	var = DIY_sharing_research_speed
+	value = 0
+}
+
 recruit_character = DIY_great_leader
 recruit_character = DIY_maximus_opelatus
 recruit_character = DIY_demoman
@@ -64,6 +69,9 @@ recruit_character = DIY_misspauling
 recruit_character = DIY_krivosheev
 recruit_character = DIY_zogu
 recruit_character = DIY_medic
+recruit_character = DIY_shariy
+recruit_character = DIY_shared_great_leader
+recruit_character = DIY_yaiko_tryas
 
 add_ideas = economic_dependency5
 add_ideas = political_stagnation

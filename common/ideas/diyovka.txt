@@ -371,8 +371,8 @@ ideas = {
 		}
 
 		DIY_ultra_sharing_king = {
-			picture = ast_abandon_the_westminster_system_communism
-			name = DIY_king_imprisoned
+			picture = ast_abandon_the_westminster_system_fascism
+			name = DIY_shared_king
 			
 			modifier = {
 				neutrality_drift = -0.03
@@ -400,7 +400,7 @@ ideas = {
 		}
 
 		DIY_shared_king = {
-			picture = jap_supremacy_of_will
+			picture = ast_abandon_the_westminster_system_fascism
 			name = DIY_shared_king
 
 			modifier = {
@@ -411,6 +411,18 @@ ideas = {
 				party_popularity_stability_factor = 0.25
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
+			}
+		}
+
+		DIY_army_of_sharing_idea = {
+			picture = NORDIC_army_communist
+			name = DIY_army_of_sharing_idea
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+				experience_gain_army_factor = 0.1
 			}
 		}
 
@@ -477,7 +489,67 @@ ideas = {
 				}
 			}
 		}
+
+		diyovian_sharism = {
+			name = diyovian_sharism
+			picture = generic_fascism_drift_bonus
+
+			modifier = {
+				neutrality_drift = -0.01
+				fascism_drift = 0.03
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				conscription = 0.02
+			}
+		}
+
+		one_party_state = {
+			name = one_party_state
+			picture = generic_prisoner
+
+			modifier = {
+				fascism_drift = 0.03
+				drift_defence_factor = 0.5
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				intelligence_agency_defense = 1
+			}
+		}
+
+		DIY_buying_villa = {
+			name = DIY_buying_villa
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				consumer_goods_factor = 0.3
+				political_power_factor = -0.15
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		SPA_buying_villa = {
+			name = SPA_buying_villa
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				consumer_goods_factor = -0.3
+				political_power_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+		}
+
+		DIY_help_out_spanish_idea = {
+			name = DIY_help_out_spanish_idea
+			picture = por_volunteers_in_the_war
+			
+			modifier = {
+				send_volunteers_tension = -1
+				send_volunteer_divisions_required = -1
+				send_volunteer_size = 5
+			}
+		}
 	}
-
-
 }

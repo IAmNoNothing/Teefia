@@ -6,7 +6,7 @@ focus_tree = {
 			add = 100
 			original_tag = UKR
 		}
-			}
+	}
 
 	default = no
 

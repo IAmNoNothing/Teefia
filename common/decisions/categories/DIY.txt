@@ -28,3 +28,13 @@ DIY_form_new_nation = {
 		
 	}
 }
+
+DIY_sharing_people = {
+	icon = GFX_decision_category_generic_propaganda
+	allowed = {
+		original_tag = DIY
+	}
+	visible = {
+		
+	}
+}

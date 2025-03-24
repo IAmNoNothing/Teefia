@@ -3,12 +3,8 @@ DIY_sharing_dm = {
 	enable = {
 		has_government = fascism
 	}
-	remove_trigger = {
-		NOT = {
-			has_government = fascism
-		}
-	}
 
+	research_speed_factor = var:DIY_sharing_research_speed
 	political_power_gain = var:DIY_sharing_pp
 	stability_factor = var:DIY_sharing_stability
 	weekly_manpower = var:DIY_sharing_weekly_manpower

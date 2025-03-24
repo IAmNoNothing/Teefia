@@ -2067,6 +2067,10 @@ focus_tree = {
 				limit = {
 					has_idea = DIY_ultra_sharing_king
 				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
 				swap_ideas = {
 					remove_idea = DIY_ultra_sharing_king
 					add_idea = DIY_sharing_necrophilia
@@ -2104,6 +2108,7 @@ focus_tree = {
 				}
 				add_stability = 0.05
 				set_country_flag = king_freed
+				custom_effect_tooltip = DIY_king_will_be_avaiable
 			}
 			ELSE_IF = {
 				limit = {
@@ -2113,8 +2118,8 @@ focus_tree = {
 				add_political_power = -50
 				add_stability = 0.05
 				set_country_flag = king_shared
+				custom_effect_tooltip = DIY_shared_king_will_be_avaiable
 			}
-			custom_effect_tooltip = DIY_king_will_be_avaiable
 		}
 	}
 
@@ -2174,6 +2179,9 @@ focus_tree = {
 			set_politics = {
 				ruling_party = fascism
 			}
+			add_dynamic_modifier = {
+				modifier = DIY_sharing_dm
+			}
 		}
 	}
 
@@ -2203,7 +2211,7 @@ focus_tree = {
 		id = DIY_share_everyone
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		cost = 5
-		x = -1
+		x = 1
 		y = 1
 		prerequisite = {
 			focus = DIY_start_sharing_political_elites
@@ -2228,10 +2236,52 @@ focus_tree = {
 	}
 
 	focus = {
+		id = DIY_army_of_sharing
+		icon = GFX_focus_NORDIC_com_army
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = DIY_share_individuals
+		prerequisite = {
+			focus = DIY_share_everyone
+			focus = DIY_share_individuals
+		}
+		completion_reward = {
+			add_ideas = DIY_army_of_sharing_idea
+
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				name = land_doc_bonus
+				category = land_doctrine
+				uses = 2
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_share_ukrainian_children
+		icon = GFX_focus_HUN_the_kingdom_of_ukraine
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = DIY_army_of_sharing
+		prerequisite = {
+			focus = DIY_army_of_sharing
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = UKR
+				type = annex_everything
+			}
+			custom_effect_tooltip = DIY_share_ukrainian_children_tt
+		}
+	}
+
+	focus = {
 		id = DIY_share_individuals
 		icon = GFX_focus_CZE_german_puppet
 		cost = 5
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = DIY_start_sharing_political_elites
 		prerequisite = {
@@ -2265,7 +2315,7 @@ focus_tree = {
 		cost = 5
 		x = -1
 		y = 1
-		relative_position_id = DIY_share_everyone
+		relative_position_id = DIY_share_individuals
 		prerequisite = {
 			focus = DIY_share_everyone
 			focus = DIY_share_individuals
@@ -2298,6 +2348,219 @@ focus_tree = {
 				remove_idea = DIY_sharing_king
 				add_idea = DIY_ultra_sharing_king
 			}
+		}
+	}
+
+	focus = {
+		id = DIY_rise_of_evil
+		icon = GFX_goal_support_fascism
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_one_party_state
+		prerequisite = {
+			focus = DIY_one_party_state
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = diyovian_nationalism
+				add_idea = diyovian_sharism
+			}
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = DIY_sharing_front
+		}
+	}
+
+	focus = {
+		id = DIY_one_party_state
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_share_ukrainian_children
+		prerequisite = {
+			focus = DIY_share_ukrainian_children
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = political_reform
+				add_idea = one_party_state
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_share_economists
+		icon = GFX_focus_generic_economic_recovery
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = DIY_share_everyone
+		prerequisite = {
+			focus = DIY_share_economists
+			focus = DIY_share_individuals
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = economic_dependency5
+				add_idea = economic_dependency4
+			}
+			custom_effect_tooltip = DIY_share_economists_tt
+		}
+	}
+
+	focus = {
+		id = DIY_help_out_spanish
+		icon = GFX_focus_ARG_invite_spanish_nationalists
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_share_economists
+		}
+		relative_position_id = DIY_share_economists
+		completion_reward = {
+			set_rule = {
+				can_send_volunteers = yes
+			}
+			add_ideas = DIY_help_out_spanish_idea
+		}
+	}
+
+	focus = {
+		id = DIY_buy_villa_in_spain
+		icon = GFX_focus_generic_befriend_nationalist_spain_focus
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_help_out_spanish
+		available = {
+			SPA = {
+				has_civil_war = no
+				has_government = fascism
+			}
+		}
+		prerequisite = {
+			focus = DIY_help_out_spanish
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = DIY_buying_villa
+				days = 90
+			}
+			SPA = {
+				add_timed_idea = {
+					idea = SPA_buying_villa
+					days = 90
+				}
+			}
+			165 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_alliance_with_spain
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		cost = 5
+		x = 2
+		y = 1
+		available = {
+			NOT = {
+				has_war_with = SPA
+			}
+			NOT = {
+				has_idea = DIY_buying_villa
+			}
+			SPA = {
+				is_in_faction = no
+			}
+			is_faction_leader = yes
+		}
+		relative_position_id = DIY_rise_of_evil
+		prerequisite = {
+			focus = DIY_rise_of_evil
+		}
+		prerequisite = {
+			focus = DIY_buy_villa_in_spain
+		}
+		completion_reward = {
+			add_to_faction = SPA
+		}
+	}
+
+	focus = {
+		id = DIY_sharing_research
+		icon = GFX_focus_NORDIC_com_research
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_rise_of_evil
+		prerequisite = {
+			focus = DIY_rise_of_evil
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_to_variable = {
+				var = DIY_sharing_research_speed
+				value = 0.05
+			}
+			custom_effect_tooltip = DIY_sharing_research_tt
+		}
+	}
+
+	focus = {
+		id = DIY_influence_minor_nations
+		icon = GFX_focus_BUL_free_balkan_states
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = DIY_rise_of_evil
+		prerequisite = {
+			focus = DIY_rise_of_evil
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_war_support = 0.05
+			custom_effect_tooltip = DIY_influence_minor_nations_tt
+		}
+	}
+
+	focus = {
+		id = DIY_sharing_our_puppets
+		icon = GFX_focus_GER_integration_of_puppet_economies
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = DIY_influence_minor_nations
+		prerequisite = {
+			focus = DIY_influence_minor_nations
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_puppet_of = DIY
+				}
+				add_autonomy_score = {
+					value = -100
+				}
+			}
+			custom_effect_tooltip = DIY_sharing_our_puppets_tt
 		}
 	}
 }
