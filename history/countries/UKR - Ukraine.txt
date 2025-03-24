@@ -20,8 +20,6 @@ load_oob = UKR_1936
 
 set_research_slots = 0
 
-recruit_character = UKR_POTUJNIY_PENETRAT
-
 create_country_leader = {
 	name = UKR_POTUJNIY_PENETRAT
 	picture = GFX_portrait_UKR_penetrat_democracy

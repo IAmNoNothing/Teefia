@@ -268,11 +268,11 @@ focus_tree = {
 		}
 		completion_reward = { 
 			add_popularity = {
-				ideology = neutrality
+				ideology = fascism
 				popularity = 1
 			}
 			set_politics = {
-				ruling_party = neutrality
+				ruling_party = fascism
 				elections_allowed = no
 			}
 		}
