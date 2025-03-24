@@ -1,0 +1,64 @@
+capital = 202
+
+set_politics = {
+	ruling_party = democratic
+	elections_allowed = yes
+	election_frequency = 48
+}
+
+set_popularities = {
+	neutrality = 20
+	communism = 20
+	democratic = 60
+	fascism = 0
+}
+
+set_stability = 0.14
+set_war_support = 0.88
+
+load_oob = UKR_1936
+
+set_research_slots = 0
+
+recruit_character = UKR_POTUJNIY_PENETRAT
+
+create_country_leader = {
+	name = UKR_POTUJNIY_PENETRAT
+	picture = GFX_portrait_UKR_penetrat_democracy
+	ideology = liberalism
+}
+
+set_party_name = {
+	ideology = neutrality
+	long_name = UKR_neutral_party_name_long
+	name = UKR_neutral_party_name_short
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = UKR_fascism_party_name_long
+	name = UKR_fascism_party_name_short
+}
+
+set_party_name = {
+	ideology = communism
+	long_name = UKR_communism_party_name_long
+	name = UKR_communism_party_name_short
+}
+
+set_party_name = {
+	ideology = democratic
+	long_name = UKR_democratic_party_name_long
+	name = UKR_democratic_party_name_short
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	basic_train = 1
+}
