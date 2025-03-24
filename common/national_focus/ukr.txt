@@ -235,9 +235,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = UKR_novi_technologies
 		}
-		completion_reward = { 
-			kill_ideology_leader = democratic
-		}
+		completion_reward = { }
 	}
 	focus = {
 		id = UKR_democratic_road
