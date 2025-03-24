@@ -235,9 +235,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = UKR_novi_technologies
 		}
-		completion_reward = { 
-			kill_ideology_leader = democratic
-		}
+		completion_reward = { }
 	}
 	focus = {
 		id = UKR_democratic_road
@@ -270,11 +268,11 @@ focus_tree = {
 		}
 		completion_reward = { 
 			add_popularity = {
-				ideology = neutrality
+				ideology = fascism
 				popularity = 1
 			}
 			set_politics = {
-				ruling_party = neutrality
+				ruling_party = fascism
 				elections_allowed = no
 			}
 		}

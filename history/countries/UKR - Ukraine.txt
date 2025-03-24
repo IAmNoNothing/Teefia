@@ -1,4 +1,4 @@
-capital = 202
+capital = 201
 
 set_politics = {
 	ruling_party = democratic
@@ -8,9 +8,9 @@ set_politics = {
 
 set_popularities = {
 	neutrality = 20
-	communism = 20
+	communism = 19
 	democratic = 60
-	fascism = 0
+	fascism = 1
 }
 
 set_stability = 0.14
@@ -20,13 +20,7 @@ load_oob = UKR_1936
 
 set_research_slots = 0
 
-recruit_character = UKR_POTUJNIY_PENETRAT
 
-create_country_leader = {
-	name = UKR_POTUJNIY_PENETRAT
-	picture = GFX_portrait_UKR_penetrat_democracy
-	ideology = liberalism
-}
 
 set_party_name = {
 	ideology = neutrality
