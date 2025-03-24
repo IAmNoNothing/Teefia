@@ -20,11 +20,7 @@ load_oob = UKR_1936
 
 set_research_slots = 0
 
-create_country_leader = {
-	name = UKR_POTUJNIY_PENETRAT
-	picture = GFX_portrait_UKR_penetrat_democracy
-	ideology = liberalism
-}
+
 
 set_party_name = {
 	ideology = neutrality
