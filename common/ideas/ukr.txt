@@ -1,0 +1,93 @@
+ideas = {
+	country = {
+	#Ідея "Сало для всіх"
+    ukr_salo_for_all = {
+        picture = GFX_idea_generic_food
+        allowed = {
+            original_tag = UKR
+        }
+        allowed_civil_war = {
+            original_tag = UKR
+        }
+        available = {
+            always = yes
+        }
+        removal_cost = -1
+        modifier = {
+            supply_consumption_factor = -0.05 #Зменшує споживання постачання на 5%
+        }
+    }
+
+    #Ідея "Козацький дух"
+    ukr_cossack_spirit = {
+        picture = GFX_idea_generic_military
+        allowed = {
+            original_tag = UKR
+        }
+        allowed_civil_war = {
+            original_tag = UKR
+        }
+        available = {
+            always = yes
+        }
+        removal_cost = -1
+        modifier = {
+            division_attack_on_core_factor = 0.05 #Збільшує атаку дивізій на своїй території на 5%
+        }
+    }
+
+    #"Гопак на полі бою"
+    ukr_hopak_on_battlefield = {
+        picture = GFX_idea_generic_dance
+        allowed = {
+            original_tag = UKR
+        }
+        allowed_civil_war = {
+            original_tag = UKR
+        }
+        available = {
+            always = yes
+        }
+        removal_cost = -1
+        modifier = {
+            division_speed = 0.05 #Збільшує швидкість дивізій на 5%
+        }
+    }
+
+    #"Чорнобильський туризм"
+    ukr_chornobyl_tourism = {
+        picture = GFX_idea_generic_tourism
+        allowed = {
+            original_tag = UKR
+        }
+        allowed_civil_war = {
+            original_tag = UKR
+        }
+        available = {
+            always = yes
+        }
+        removal_cost = -1
+        modifier = {
+            consumer_goods_factories_factor = -0.10 #Зменшує кількість фабрик, що виробляють товари народного споживання, на 10%
+        }
+    }
+
+    #"Київський торт"
+    ukr_kyiv_cake = {
+        picture = GFX_idea_generic_food
+        allowed = {
+            original_tag = UKR
+        }
+        allowed_civil_war = {
+            original_tag = UKR
+        }
+        available = {
+            always = yes
+        }
+        removal_cost = -1
+        modifier = {
+            stability = 0.02 #Збільшує стабільність на 5%
+        }
+    }
+}
+}

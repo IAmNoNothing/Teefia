@@ -1,6 +1,6 @@
 characters = {
-	UKR_POTUJNIY_PENETRAT = {
-		name = UKR_POTUJNIY_PENETRAT
+	UKR_Mikola_Tarasenko = {
+		name = UKR_mikola_tarasenko
 		portraits = {
 			civilian = {
 				large = GFX_portrait_UKR_penetrat_democracy
@@ -11,4 +11,43 @@ characters = {
 			
 		}
 	}
+
+
+	UKR_Gimler_Molodshiy = {
+		name = UKR_gimler_molodshiy
+		portraits = {
+		civilian = {
+			large = GFX_portrait_UKR_1_nazi_leader
+		}
+	}
+		country_leader = {
+			ideology = nazism
+		
+	}
+}
+
+	UKR_Taras_Bulbulyator = {
+		name = UKR_taras_bulbulyator
+		portraits = {
+		civilian = {
+			large = GFX_portrait_UKR_taras_bulbulyator
+		}
+}
+		country_leader = {
+			ideology = conservatism
+	
+	}
+}
+UKR_Ivan_Nektarenko = {
+		name = UKR_gimler_molodshiy
+		portraits = {
+		civilian = {
+			large = GFX_portrait_UKR_1_nazi_leader
+		}
+}
+		country_leader = {
+		ideology = socialism
+	
+	}
+}
 }

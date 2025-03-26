@@ -16,6 +16,12 @@ set_popularities = {
 set_stability = 0.14
 set_war_support = 0.88
 
+recruit_character = UKR_Mikola_Tarasenko
+recruit_character = UKR_Gimler_Molodshiy
+recruit_character = UKR_Taras_Bulbulyator
+recruit_character = UKR_Ivan_Nektarenko
+
+
 load_oob = UKR_1936
 
 set_research_slots = 0

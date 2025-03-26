@@ -1,280 +1,116 @@
 focus_tree = {
 	id = UKR_focus_tree
-	country = {
+		country = {
 		factor = 0
 		modifier = {
 			add = 100
 			original_tag = UKR
 		}
 	}
-
-	default = no
-
-	focus = {
-		id = UKR_nasha_doroga
-		icon = x
-		x = 6
-		y = 0
-		cost = 10
-		completion_reward = {
-			add_political_power = 50
-			}
-			}
-
-
-	focus = {
-		id = UKR_our_problems
-		icon = GFX_SOV_reinstitute_the_mestnichestvo_ccp_2d_sov_compatibility
-		x = 5.5
-		y = 1
-		cost = 5
-		prerequisite = {
-			focus = UKR_nasha_doroga
+    focus = {
+        id = ukr_start_political_tree_focus
+        icon = GFX_goal_generic_major_war
+        x = 5
+        y = 0
+        cost = 10
+        completion_reward = {
+            add_political_power = 120
+        }
+		ai_will_do = {
+			factor = 1
 		}
-		completion_reward = {
-			add_manpower = -30000
-			add_stability = -0.05
-			DIY = {
-				add_manpower = 30000
-			}
-		}
-			}
-	focus = {
-		id = UKR_ua_dreams
-		icon = ]
-		cost = 5
-		prerequisite = {
-			focus = UKR_nasha_doroga
-		}
-		x = 7.5
-		y = 1
-		completion_reward = { 
-			set_rule = {
-				can_join_factions = no
-						}
-			set_research_slots = 1
-			201 ={ 
-				add_building_construction = {
-				type = infrastructure
-				level = 5
-			}
-				}
-			199 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					}
+    }
 
-				}
-			1018 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					}
-
-			}
-			203 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					}
-			}
-			202 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					}
-			}
-			192 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					}
-			}
-			197 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					}
-			}
-			834 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					}
-			}
-			198 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					}
-			}
-			1020 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					}
-			}
-	}
-			}
 	focus = {
-		id = UKR_prom_reload
-		icon = x
-		cost = 10
-		x = 10
-		y = 0
-		completion_reward = { }
-
-			}
-	focus = {
-		id = UKR_svoi_sered_shujih
-		icon = GFX_EMI_NOR_rikstanken_turret
-		cost = 10
+		id = ukr_sho_mi_take_focus
+		icon = GFX_goal_generic_political_pressure
 		x = 3
 		y = 1
-		prerequisite = {
-			focus = UKR_nasha_doroga
-		}
-		available = {
-			has_manpower < 30000
-		}
-		completion_reward = { 
-			add_manpower = 50000
-		}
-			}
-	focus = {
-		id = UKR_ukranian_road
-		icon = GFX_EMI_NOR_rikstanken_turret
-		x = 6
-		y =2
-		prerequisite = {
-			focus = UKR_our_problems
-			focus = UKR_ua_dreams
-				}
-			completion_reward = {
-				1018 = {
-					set_demilitarized_zone = yes
-				}
-				203 = {
-					set_demilitarized_zone = yes
-				}	
-			    197 = {
-					set_demilitarized_zone = yes
-				}
-
-
-			}
-	}
-	focus = {
-		id = UKR_tumbocka_moment
-		icon = [
-		cost = 20
-		x = 10
-		y = 1
-		prerequisite = {
-			focus = UKR_prom_reload
-		}
-		completion_reward = { 
-
-		}
-	}
-	focus = {
-		id = UKR_nationalization_of_industry
-		icon = [
 		cost = 10
-		x = 12
-		y = 1
-		prerequisite = {
-			focus = UKR_prom_reload
+		prerequisite = { focus = ukr_start_political_tree_focus }
+		completion_reward = {
+			add_political_power = 120
 		}
-		completion_reward = { }
+		ai_will_do = {
+			factor = 1
+		}
 	}
 	focus = {
-		id = UKR_dergavny_vkladennya
-		icon = x
-		cost = 10
-		x = 14
-		y = 1
-		prerequisite = {
-			focus = UKR_prom_reload
-		}
-		completion_reward = { }
-	}
-	focus = {
-		id = UKR_usa_grants
-		icon = x
-		cost = 10
-		x = 16
-		y = 1
-		prerequisite = {
-			focus = UKR_prom_reload
-		}
-		completion_reward = { }
-	}
-
-	focus = {
-			id = UKR_novi_technologies
-			icon = x
-			cost = 10
-			x = 10
-			y = 2
-			prerequisite = { 
-				focus = UKR_tumbocka_moment
-			}
-			completion_reward = { }
-	}
-	focus = {
-		id = UKR_diferent_roads
-		icon = x
-		cost = 10
-		x = 8
-		y = 3
-		prerequisite = { 
-			focus = UKR_ukranian_road
-		}
-		prerequisite = { 
-			focus = UKR_novi_technologies
-		}
-		completion_reward = { }
-	}
-	focus = {
-		id = UKR_democratic_road
-		icon = x
-		cost = 70
+		id = ukr_jivunchiki_focus
+		icon = GFX_goal_generic_political_pressure
 		x = 7
-		y = 4
-		prerequisite = { 
-			focus = UKR_diferent_roads
+		y = 1
+		cost = 10
+		prerequisite = { focus = ukr_start_political_tree_focus }
+		completion_reward = {
+			add_political_power = 120
 		}
-		completion_reward = { 
-			add_popularity = {
-				ideology = democratic
-				popularity = 1
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = yes
-			}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+    focus = {
+        id = ukr_ideology_situation_focus
+        icon = GFX_goal_generic_political_pressure
+        x = 5
+        y = 1
+        cost = 10
+        prerequisite = { focus = ukr_start_political_tree_focus }
+        completion_reward = {
+        
+		}
+
+        ai_will_do = {
+			factor = 1
+		}
+    }
+
+	focus = {
+		id = ukr_political_branch_focus
+		icon = GFX_goal_generic_political_pressure
+		x = 5
+		y = 2
+		cost = 10
+		prerequisite = { focus = ukr_ideology_situation_focus }
+		
+		completion_reward = {
+				add_political_power = -50
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = ukr_yes_war_branch_focus
+		icon = GFX_goal_generic_major_war
+		x = 4
+		y = 3
+		cost = 10
+		prerequisite = { focus = ukr_political_branch_focus }
+		
+		completion_reward = {
+				add_political_power = -50
+		}
+		ai_will_do = { factor = 1 }
+		mutually_exclusive = {
+			focus = ukr_no_war_branch_focus
 		}
 	}
 	focus = {
-		id = UKR_degenerat_road
-		icon = x
-		cost = 30
-		x = 9
-		y = 4
-		prerequisite = { 
-			focus = UKR_diferent_roads
-		}
-		completion_reward = { 
-			add_popularity = {
-				ideology = fascism
-				popularity = 1
-			}
-			set_politics = {
-				ruling_party = fascism
-				elections_allowed = no
-			}
+		id = ukr_no_war_branch_focus
+		icon = GFX_goal_generic_major_war
+		x = 6
+		y = 3
+		cost = 10
+		prerequisite = { focus = ukr_political_branch_focus }
+		
+		completion_reward = { add_political_power = -50 }
+
+		ai_will_do = {
+			factor = 2
 		}
 	}
 }
