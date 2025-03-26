@@ -1,6 +1,6 @@
 ideas = {
 	country = {
-	#Ідея "Сало для всіх"
+
     ukr_salo_for_all = {
         picture = GFX_idea_generic_food
         allowed = {
@@ -18,7 +18,6 @@ ideas = {
         }
     }
 
-    #Ідея "Козацький дух"
     ukr_cossack_spirit = {
         picture = GFX_idea_generic_military
         allowed = {
@@ -36,7 +35,7 @@ ideas = {
         }
     }
 
-    #"Гопак на полі бою"
+
     ukr_hopak_on_battlefield = {
         picture = GFX_idea_generic_dance
         allowed = {
@@ -54,7 +53,7 @@ ideas = {
         }
     }
 
-    #"Чорнобильський туризм"
+
     ukr_chornobyl_tourism = {
         picture = GFX_idea_generic_tourism
         allowed = {
@@ -72,7 +71,7 @@ ideas = {
         }
     }
 
-    #"Київський торт"
+
     ukr_kyiv_cake = {
         picture = GFX_idea_generic_food
         allowed = {
