@@ -2,7 +2,7 @@ ideas = {
 	country = {
 
     ukr_salo_for_all = {
-        picture = GFX_idea_generic_food
+        picture = GFX_idea_generic_military
         allowed = {
             original_tag = UKR
         }
@@ -14,7 +14,8 @@ ideas = {
         }
         removal_cost = -1
         modifier = {
-            supply_consumption_factor = -0.05 #Зменшує споживання постачання на 5%
+            supply_consumption_factor = -0.10 #Зменшує споживання постачання на 5%
+            consumer_goods_factor = 0.05 #Зменшує споживання товарів народного споживання на 5%
         }
     }
 
@@ -31,7 +32,8 @@ ideas = {
         }
         removal_cost = -1
         modifier = {
-            division_attack_on_core_factor = 0.05 #Збільшує атаку дивізій на своїй території на 5%
+            army_defence_factor = 0.05 #Збільшує захист дівки на 5%
+            attack_bonus_against_cores = 0.05 #Збільшує бонус атаки проти нац територій на 5%
         }
     }
 

@@ -34,7 +34,7 @@ characters = {
 		}
 }
 		country_leader = {
-			ideology = conservatism
+			ideology = centrism
 	
 	}
 }
@@ -46,7 +46,7 @@ UKR_Ivan_Nektarenko = {
 		}
 }
 		country_leader = {
-		ideology = socialism
+		ideology = leninism
 	
 	}
 }

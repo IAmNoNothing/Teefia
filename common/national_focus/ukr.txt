@@ -29,7 +29,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = ukr_start_political_tree_focus }
 		completion_reward = {
-			add_political_power = 120
+			add_ideas = ukr_cossack_spirit
 		}
 		ai_will_do = {
 			factor = 1
@@ -43,7 +43,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = ukr_start_political_tree_focus }
 		completion_reward = {
-			add_political_power = 120
+			add_ideas = ukr_salo_for_all
 		}
 		ai_will_do = {
 			factor = 1
@@ -59,7 +59,14 @@ focus_tree = {
         cost = 10
         prerequisite = { focus = ukr_start_political_tree_focus }
         completion_reward = {
-        
+            hidden_effect = {
+				set_popularities = {
+					democratic = 100
+			}
+			custom_effect_tooltip = UKR_democratic_victory_tooltip
+			}
+
+		}
 		}
 
         ai_will_do = {
@@ -112,5 +119,78 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
+	}
+	focus = {
+		id = ukr_military_branch_focus
+		icon = GFX_goal_generic_major_war
+		x = 4
+		y = 4
+		cost = 10
+		prerequisite = { focus = ukr_yes_war_branch_focus }
+		completion_reward = {
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = ukr_army_focus
+		icon = GFX_goal_generic_major_war
+		x = 2
+		y = 4
+		cost = 10
+		prerequisite = { focus = ukr_yes_war_branch_focus }
+		completion_reward = {
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = ukr_new_weapons_focus
+		icon = GFX_goal_generic_major_war
+		x = 3
+		y = 5
+		cost = 10
+		prerequisite = { 
+				focus = ukr_military_branch_focus 
+				focus = ukr_army_focus
+			}
+		completion_reward = {
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = ukr_grants_focus
+		icon = GFX_goal_generic_major_war
+		x = 6
+		y = 4
+		cost = 10
+		prerequisite = { 
+				focus = ukr_no_war_branch_focus
+			}
+		completion_reward = {
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = ukr_big_building_focus
+		icon = GFX_goal_generic_major_war
+		cost = x
+		x = 8
+		y = 4
+		cost = 10
+		prerequisite = { 
+			focus = ukr_no_war_branch_focus
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = ukr_nadiya_focus
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		x = 7
+		y = 5
+		prerequisite = { 
+			focus = ukr_big_building_focus
+			focus = ukr_grants_focus
+		}
+		completion_reward = { }
 	}
 }

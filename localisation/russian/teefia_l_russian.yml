@@ -277,11 +277,25 @@
   UKR_Gimler_Molodshiy: "Гімлер Молодший"
   UKR_Taras_Bulbulyator:  "Тарас Бульбулятор"
   UKR_Ivan_Nektarenko:  "Іван Нектаренко"
-  UKR_neutral_party_name_long: Українська консерваторна партія
-  UKR_neutral_party_name_short: УКП
-  UKR_communism_party_name_long: Українська комуністична партія
-  UKR_communism_party_name_short: УКП
-  UKR_fascism_party_name_long: Українська націоналістична партія
-  UKR_fascism_party_name_short: УНП
-  UKR_democratic_party_name_long: Українська демократична партія
-  UKR_democratic_party_name_short: УДП
+  UKR_neutral_party_name_long: "Українська консерваторна партія"
+  UKR_neutral_party_name_short: "УКП"
+  UKR_communism_party_name_long: "Українсько-совєтська партія"
+  UKR_communism_party_name_short: "УСП"
+  UKR_fascism_party_name_long: "Українська націоналістична партія"
+  UKR_fascism_party_name_short: "УНП"
+  UKR_democratic_party_name_long: "Українська пососна партія"
+  UKR_democratic_party_name_short: "УПП"
+  ukr_start_political_tree_focus: "Наша історія"
+  ukr_start_political_tree_focus_desc: "Ми повинні визначити нашу політичну майбутність."
+  ukr_sho_mi_take_focus: "Козацький дух"
+  ukr_sho_mi_take_focus_desc: "Ми повинні відновити нашу козацьку славу."
+  ukr_jivunchiki_focus: "Живунчики"
+  ukr_jivunchiki_focus_desc: "Наша спроможність виробляти власну зброю дозволить нам бути незалежними."
+  ukr_ideology_situation_focus: "Розбіжності в партіях"
+  ukr_ideology_situation_focus_desc: "Ми повинні визначити нашу ідеологічну позицію."
+  ukr_political_branch_focus: "Наш шлях"
+  ukr_political_branch_focus_desc: "Те куди ми підемо залежить від нас."
+  ukr_yes_war_branch_focus: "Так, війна!"
+  ukr_yes_war_branch_focus_desc: "Якщо війна не минуча, то треба бути готовими."
+  ukr_no_war_branch_focus: "Ні, мир!"
+  ukr_no_war_branch_focus_desc: "Дійовка - наш вірний союзник, він ніколи нас не зрадить."
