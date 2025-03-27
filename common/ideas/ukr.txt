@@ -14,8 +14,8 @@ ideas = {
         }
         removal_cost = -1
         modifier = {
-            supply_consumption_factor = -0.10 #Зменшує споживання постачання на 5%
-            consumer_goods_factor = 0.05 #Зменшує споживання товарів народного споживання на 5%
+            supply_consumption_factor = -0.10 #Зменшує споживання постачання на 10%
+            consumer_goods_factor = 0.05 #Збільшує споживання товарів народного споживання на 5%
         }
     }
 
@@ -33,7 +33,7 @@ ideas = {
         removal_cost = -1
         modifier = {
             army_defence_factor = 0.05 #Збільшує захист дівки на 5%
-            attack_bonus_against_cores = 0.05 #Збільшує бонус атаки проти нац територій на 5%
+            attack_bonus_against_cores = 0.05 #Збільшує бонус атаки на нац територіях на 5%
         }
     }
 
@@ -86,7 +86,7 @@ ideas = {
         }
         removal_cost = -1
         modifier = {
-            stability = 0.02 #Збільшує стабільність на 5%
+            stability = 0.02 #Збільшує стабільність на 2%
         }
     }
 }
