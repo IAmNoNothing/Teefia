@@ -1,6 +1,6 @@
 characters = {
 	UKR_Mikola_Tarasenko = {
-		name = UKR_mikola_tarasenko
+		name = UKR_Mikola_Tarasenko
 		portraits = {
 			civilian = {
 				large = GFX_portrait_UKR_penetrat_democracy
@@ -14,7 +14,7 @@ characters = {
 
 
 	UKR_Gimler_Molodshiy = {
-		name = UKR_gimler_molodshiy
+		name = UKR_Gimler_Molodshiy
 		portraits = {
 		civilian = {
 			large = GFX_portrait_UKR_1_nazi_leader
@@ -27,7 +27,7 @@ characters = {
 }
 
 	UKR_Taras_Bulbulyator = {
-		name = UKR_taras_bulbulyator
+		name = UKR_Taras_Bulbulyator
 		portraits = {
 		civilian = {
 			large = GFX_portrait_UKR_taras_bulbulyator
@@ -39,7 +39,7 @@ characters = {
 	}
 }
 UKR_Ivan_Nektarenko = {
-		name = UKR_gimler_molodshiy
+		name = UKR_Ivan_Nektarenko
 		portraits = {
 		civilian = {
 			large = GFX_portrait_UKR_1_nazi_leader
