@@ -58,21 +58,21 @@ focus_tree = {
         y = 1
         cost = 10
         prerequisite = { focus = ukr_start_political_tree_focus }
-        completion_reward = {
-            hidden_effect = {
-				set_popularities = {
-					democratic = 100
+        completion_reward = {            
+			hidden_effect = {
+			set_popularities = {
+				democratic = 100
 			}
-			custom_effect_tooltip = UKR_democratic_victory_tooltip
-			}
-
 		}
-		}
+			custom_effect_tooltip = ukr_democratic_victory_tooltip
+		
+	}
+		
 
         ai_will_do = {
 			factor = 1
 		}
-    }
+	}
 
 	focus = {
 		id = ukr_political_branch_focus
@@ -83,7 +83,7 @@ focus_tree = {
 		prerequisite = { focus = ukr_ideology_situation_focus }
 		
 		completion_reward = {
-				add_political_power = -50
+			add_war_support = 0.1
 		}
 		ai_will_do = {
 			factor = 1
@@ -99,7 +99,8 @@ focus_tree = {
 		prerequisite = { focus = ukr_political_branch_focus }
 		
 		completion_reward = {
-				add_political_power = -50
+			add_war_support = 0.30
+			add_ideas = ukr_hopak_on_battlefield
 		}
 		ai_will_do = { factor = 1 }
 		mutually_exclusive = {
@@ -115,7 +116,8 @@ focus_tree = {
 		prerequisite = { focus = ukr_political_branch_focus }
 		
 		completion_reward = { add_political_power = -50 }
-
+		mutually_exclusive = {
+			focus = ukr_yes_war_branch_focus}
 		ai_will_do = {
 			factor = 2
 		}
