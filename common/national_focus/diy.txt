@@ -2563,4 +2563,104 @@ focus_tree = {
 			custom_effect_tooltip = DIY_sharing_our_puppets_tt
 		}
 	}
+
+	focus = {
+		id = DIY_babys_for_army
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_sharing_research
+		}
+		relative_position_id = DIY_sharing_research
+		completion_reward = {
+			add_ideas = DIY_baby_army_idea
+		}
+	}
+
+	focus = {
+		id = DIY_spain_killers
+		icon = GFX_focus_generic_befriend_nationalist_spain_focus
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_alliance_with_spain
+		}
+		relative_position_id = DIY_alliance_with_spain
+		available = {
+			is_ally_with = SPA
+		}
+		completion_reward = {
+			puppet = SPA
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = DIY_in_need_of_lube
+		icon = GFX_focus_generic_offshore_oil_rig
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_sharing_our_puppets
+		}
+		prerequisite = {
+			focus = DIY_babys_for_army
+		}
+		prerequisite = {
+			focus = DIY_spain_killers
+		}
+		relative_position_id = DIY_babys_for_army
+		available = {
+			has_tech = fuel_refining
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 16
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_asylum_of_sharing
+		icon = GFX_goal_generic_CAS
+		cost = 20
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DIY_in_need_of_lube
+		}
+		relative_position_id = DIY_in_need_of_lube
+		completion_reward = {
+			every_country = {
+				limit = {
+					NOT = {
+						tag = DIY
+					}
+				}
+				DIY = {
+					create_wargoal = {
+						target = PREV
+						type = independence_wargoal
+					}
+				}
+			}
+			add_war_support = 0.1
+			add_research_slot = 1
+		}
+	}
 }

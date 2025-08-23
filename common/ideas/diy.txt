@@ -551,5 +551,19 @@ ideas = {
 				send_volunteer_size = 5
 			}
 		}
+
+		DIY_baby_army_idea = {
+			name = DIY_baby_army_idea
+			picture = chi_wargaming_division
+
+			modifier = {
+				army_org_factor = -0.3
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_speed_factor = 0.2
+				supply_consumption_factor = -0.2
+				monthly_population = 0.1
+			}
+		}
 	}
 }
