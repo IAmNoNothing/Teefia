@@ -1,24 +1,33 @@
 focus_tree = {
 	id = UKR_focus_tree
-		country = {
+	country = {
 		factor = 0
 		modifier = {
 			add = 100
 			original_tag = UKR
 		}
+	 }
+
+	 default = no
+	reset_on_civilwar = no
+	continuous_focus_position = {
+		x = 10
+		y = 2500
 	}
-    focus = {
-        id = ukr_start_political_tree_focus
-        icon = GFX_goal_generic_major_war
-        x = 5
-        y = 0
-        cost = 10
-        completion_reward = {
-            add_political_power = 120
-        }
-		ai_will_do = {
-			factor = 1
+
+	focus = {
+		id = UKR_national_unity
+		icon = GFX_goal_anti_comintern_pact
+		x = 0
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+			set_variable = {
+				var = UKR_national_unity_completed
+				value = 1
+			}
 		}
-    }
+	}
 
 }
