@@ -1,0 +1,14 @@
+state={
+	id=1082
+	name="STATE_1082"
+	provinces={
+		6423 9419 11422 11437 11561 
+	}
+	manpower=1133154
+	buildings_max_level_factor=2
+	state_category = town
+	local_supplies=0
+	history = {
+		owner = DPR
+	}
+}
