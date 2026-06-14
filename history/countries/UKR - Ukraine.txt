@@ -26,10 +26,6 @@ load_oob = UKR_1936
 
 set_research_slots = 1
 
-add_ideas = {
-	fffffff
-}
-
 
 
 set_party_name = {

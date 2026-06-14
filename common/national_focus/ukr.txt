@@ -14,14 +14,20 @@ focus_tree = {
 		x = 10
 		y = 2500
 	}
-#фокуси дипломатії - основні
+
 	focus = {
-		id = UKR_question_of_legitimacy
-		x = 13
+		id = UKR_national_unity
+		icon = GFX_goal_anti_comintern_pact
+		x = 0
 		y = 0
 		cost = 10
 		completion_reward = {
 			add_political_power = 150
+			set_variable = {
+				var = UKR_national_unity_completed
+				value = 1
 			}
 		}
 	}
+
+}
