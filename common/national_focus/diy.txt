@@ -91,13 +91,214 @@ focus_tree = {
 		x = -1
 		y = 1
 		mutually_exclusive = {
-			
+			focus = DIY_diyovian_politics_communist_influx
 		}
 		prerequisite = {
 			focus = DIY_diyovian_politics_strengthen_grip
 		}
 		completion_reward = {
-			add_ideas = DIY_diyovian_monarchy
+			add_ideas = DIY_diyovian_monarchy_1
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_diyivka_station
+		text = DIY_diyivka_station
+		icon = GFX_focus_generic_railroad
+		cost = 5
+		relative_position_id = DIY_diyovian_politics_king_secures_power
+		prerequisite = {
+			focus = DIY_diyovian_politics_king_secures_power
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			build_railway = {
+				path = { 6451 6478 9433 11437 }
+				level = 2
+			}
+			add_opinion_modifier = {
+				target = UKR
+				modifier = DIY_built_diyivka_station
+			}
+			add_opinion_modifier = {
+				target = DPR
+				modifier = DIY_built_diyivka_station
+			}
+			1083 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		# build more trains
+		id = DIY_build_more_trains
+		text = DIY_build_more_trains
+		icon = GFX_focus_IRQ_train
+		cost = 5
+		relative_position_id = DIY_diyivka_station
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DIY_diyivka_station
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 25
+			}
+			
+			add_ideas = DIY_build_more_trains_idea
+
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_fortify_depo
+		text = DIY_fortify_depo
+		icon = GFX_SOV_far_east_fortification_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = DIY_diyivka_station
+		}
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = DIY_diyivka_station
+		completion_reward = {
+			1083 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = DIY_fortification_effort
+		}
+	}
+
+	focus = {
+		# communists invite communists and oppose king
+		id = DIY_diyovian_politics_communist_influx
+		text = DIY_diyovian_politics_communist_influx
+		icon = GFX_focus_generic_spur_communist_revolutions
+		relative_position_id = DIY_diyovian_politics_strengthen_grip
+		cost = 5
+		x = 1
+		y = 1
+		mutually_exclusive = {
+			focus = DIY_diyovian_politics_king_secures_power
+		}
+		prerequisite = {
+			focus = DIY_diyovian_politics_strengthen_grip
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = DIY_communist_influx_idea
+				months = 3
+			}
+			add_stability = -0.1
+		}
+	}
+
+	# INDUSTRY
+
+	focus = {
+		id = DIY_continue_industrial_revolution
+		cost = 10
+		text = DIY_continue_industrial_revolution
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		relative_position_id = DIY_diyovian_politics
+		x = 5
+		y = 0
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = DIY_military_industry_1
+		text = DIY_military_industry_1
+		cost = 5
+		icon = GFX_focus_generic_military_industry
+		relative_position_id = DIY_continue_industrial_revolution
+		x = -1
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		prerequisite = {
+			focus = DIY_continue_industrial_revolution
+		}
+	}
+
+	focus = {
+		id = DIY_agricultural_investments
+		text = DIY_agricultural_investments
+		icon = GFX_focus_ARG_capitalize_the_beef_industry
+		cost = 5
+		relative_position_id = DIY_continue_industrial_revolution
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DIY_continue_industrial_revolution
+		}
+		completion_reward = {
+			add_ideas = DIY_agricultural_investments_idea
+		}
+	}
+
+	focus = {
+		id = DIY_build_dam
+		text = DIY_build_dam
+		icon = GFX_focus_PRC_construct_the_banqiao_dam
+		cost = 5
+		relative_position_id = DIY_continue_industrial_revolution
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = DIY_continue_industrial_revolution
+		}
+		completion_reward = {
+			1083 = {
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = 9433
+				}
+			}
 		}
 	}
 }

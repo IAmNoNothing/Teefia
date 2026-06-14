@@ -14,6 +14,10 @@ opinion_modifiers = {
 		value = 200
 	}
 
+	DIY_built_diyivka_station = {
+		value = 10
+	}
+
 	hostile_status = { #special used for civil wars that are on hold and blocks faction stuff
 		value = -100
 	}
