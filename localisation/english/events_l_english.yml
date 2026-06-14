@@ -1,0 +1,46 @@
+﻿l_english:
+  # = DIYOVKA =
+
+  diyovka.1.t: "Diyovka asks to join Comintern"
+  diyovka.1.d: "Diyovian communists need protection from burjuazniy zapad and ukrainian nationalists. What should we do?"
+  diyovka.1.a: "Another big boy in faction"
+  diyovka.1.b: "We have Mongolia and Tannu-Tuva lol"
+
+  diyovka.2.t: "USSR agrees"
+  diyovka.2.d: "They reacted positively on our request. Now we are allies."
+  diyovka.2.a: "Very good!"
+
+  diyovka.3.t: "USSR rejects"
+  diyovka.3.d: "They rejected our request!"
+  diyovka.3.a: "How dare they!"
+
+  diyovka.4.t: "Diyovka asks us for control over Ukrainian territory."
+  diyovka.4.d: "Duh"
+  diyovka.4.a: "Yes"
+  diyovka.4.b: "No"
+  diyovka.4.c: "Give them only part of Ukraine."
+
+  diyovka.5.t: "USSR accepts our request"
+  diyovka.5.d: "They gave eastern Ukraine under our control"
+  diyovka.5.a: "Another part of empire back home!"
+
+  diyovka.6.t: "USSR rejects our request"
+  diyovka.6.d: "The refused to return our territory back!"
+  diyovka.6.a: "Bastards!"
+
+  diyovka.7.t: "Diyovka asks us for polish Ukraine"
+  diyovka.7.d: "Duh"
+  diyovka.7.a: "Yes"
+  diyovka.7.b: "Nope"
+
+  diyovka.8.t: "Poland returns terriroty"
+  diyovka.8.d: "We are now at our historical borders!"
+  diyovka.8.a: "Hurray!"
+
+  diyovka.9.t: "Poland refused"
+  diyovka.9.d: "Well, I guess someone wants to be first in our paravoz of victories!"
+  diyovka.9.a: "Paravoz started moving..."
+
+  diyovka.10.t: "Soviet Union gives returns our lands!"
+  diyovka.10.d: "They agreed to return only part of land, leaving higly industrialized and resourceful areas of Donbas to themselves."
+  diyovka.10.a: "Not bad."

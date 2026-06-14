@@ -1,0 +1,26 @@
+﻿l_english:
+  # = DIYOVKA =
+
+  DIY: "Diyovka"
+  DIY_DEF: "Diyovka"
+  DIY_ADJ: "Diyovian"
+  DIY_neutrality: "Kingdom of Diyovka"
+  DIY_neutrality_DEF: "the Kingdom of Diyovka"
+  DIY_neutrality_ADJ: "Royal Diyovian"
+
+  DIY_neutral_party_name_long: "Legitimistic Party of Andriy the Great"
+  DIY_neutral_party_name_short: "LPAG"
+
+  DIY_communism_party_name_long: "Party of Diyovian Krivosheeviks"
+  DIY_communism_party_name_short: "PDK"
+
+  DIY_fascism_party_name_long: "Diyovian National Front of Sharing"
+  DIY_fascism_party_name_short: "DNFS"
+
+  DIY_democratic_party_name_long: "Nationalistic Social-Democratic Andriy's Party"
+  DIY_democratic_party_name_short: "NSDAP"
+
+  # = DPR =
+  DPR: "Dnipropetrovsk People's Republic"
+  DPR_DEF: "the Dnipropetrovsk People's Republic"
+  DPR_ADJ: "Dniprovian"
