@@ -33,10 +33,6 @@ recruit_character = DIY_shariy
 recruit_character = DIY_shared_great_leader
 recruit_character = DIY_yaiko_tryas
 
-add_ideas = economic_dependency5
-add_ideas = political_stagnation
-add_ideas = diyovian_nationalism
-
 set_party_name = {
 	ideology = neutrality
 	long_name = DIY_neutral_party_name_long

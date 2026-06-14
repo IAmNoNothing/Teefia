@@ -1,10 +1,56 @@
 ideas = {
 	country = {
-		DIY_diyovian_monarchy = {
+		DIY_diyovian_monarchy_1 = {
 			name = DIY_diyovian_monarchy
 			picture = generic_monarchist_uprising
 			modifier = {
-				democratic_drift = 0.01
+				neutrality_drift = 0.01
+				stability_factor = 0.05
+			}
+		}
+
+		DIY_communist_influx_idea = {
+			name = DIY_communist_influx_idea
+			picture = generic_communism_drift_bonus
+			modifier = {
+				communism_drift = 0.2
+				weekly_manpower = 15
+				war_support_weekly = 0.005
+			}
+		}
+
+		DIY_build_more_trains_idea = {
+			name = DIY_build_more_trains_idea
+			picture = generic_railroads
+			modifier = {
+				war_support_factor = 0.05
+			}
+		
+			equipment_bonus = {
+				train_equipment = {
+					build_cost_ic = -0.2
+					reliability_factor = 0.15
+					instant = yes
+				}
+			}
+		}
+
+		DIY_fortification_effort = {
+			name = DIY_fortification_effort
+			picture = generic_fortify_the_borders
+			modifier = {
+				war_support_factor = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		DIY_agricultural_investments_idea = {
+			picture = LIT_invested_in_farms
+			name = DIY_agricultural_investments_idea
+			modifier = {
+				monthly_population = 0.15
+				consumer_goods_factor = -0.05
+				production_speed_infrastructure_factor = 0.05
 			}
 		}
 	}
