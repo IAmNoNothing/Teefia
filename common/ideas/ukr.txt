@@ -1,93 +1,11 @@
 ideas = {
-	country = {
+    country = {
 
-    ukr_salo_for_all = {
-        picture = GFX_idea_generic_military
-        allowed = {
-            original_tag = UKR
-        }
-        allowed_civil_war = {
-            original_tag = UKR
-        }
-        available = {
-            always = yes
-        }
-        removal_cost = -1
-        modifier = {
-            supply_consumption_factor = -0.10 #Зменшує споживання постачання на 10%
-            consumer_goods_factor = 0.05 #Збільшує споживання товарів народного споживання на 5%
+        idea_UKR_agricultural_economics = {
+
+            modifier = {
+                production_speed_
+            }
         }
     }
-
-    ukr_cossack_spirit = {
-        picture = GFX_idea_generic_military
-        allowed = {
-            original_tag = UKR
-        }
-        allowed_civil_war = {
-            original_tag = UKR
-        }
-        available = {
-            always = yes
-        }
-        removal_cost = -1
-        modifier = {
-            army_defence_factor = 0.05 #Збільшує захист дівки на 5%
-            attack_bonus_against_cores = 0.05 #Збільшує бонус атаки на нац територіях на 5%
-        }
-    }
-
-
-    ukr_hopak_on_battlefield = {
-        picture = GFX_idea_generic_dance
-        allowed = {
-            original_tag = UKR
-        }
-        allowed_civil_war = {
-            original_tag = UKR
-        }
-        available = {
-            always = yes
-        }
-        removal_cost = -1
-        modifier = {
-        }
-    }
-
-
-    ukr_chornobyl_tourism = {
-        picture = GFX_idea_generic_tourism
-        allowed = {
-            original_tag = UKR
-        }
-        allowed_civil_war = {
-            original_tag = UKR
-        }
-        available = {
-            always = yes
-        }
-        removal_cost = -1
-        modifier = {
-            consumer_goods_factories_factor = -0.10 #Зменшує кількість фабрик, що виробляють товари народного споживання, на 10%
-        }
-    }
-
-
-    ukr_kyiv_cake = {
-        picture = GFX_idea_generic_food
-        allowed = {
-            original_tag = UKR
-        }
-        allowed_civil_war = {
-            original_tag = UKR
-        }
-        available = {
-            always = yes
-        }
-        removal_cost = -1
-        modifier = {
-            stability = 0.02 #Збільшує стабільність на 2%
-        }
-    }
-}
 }
