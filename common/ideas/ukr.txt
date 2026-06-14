@@ -4,8 +4,22 @@ ideas = {
         idea_UKR_agricultural_economics = {
 
             modifier = {
-                production_speed_
+                production_speed_industrial_complex_factor = -0.2
+                consumer_goods_factor = 0.1
+                factory_energy_consumption = -0.1
+                production_speed_arms_factory_factor = -0.2
             }
         }
+        idea_UKR_a_demoralized_army = {
+
+            modifier = {
+                
+            
+        }
     }
+        idea_UKR_a_amid_enemies = {
+
+            modifier = {
+                
+        }
 }

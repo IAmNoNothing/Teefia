@@ -7,11 +7,12 @@ set_politics = {
 }
 
 set_popularities = {
-	neutrality = 30
-	communism = 19
-	democratic = 60
-	fascism = 35
+	neutrality = 55
+	communism = 15
+	democratic = 25
+	fascism = 5
 }
+
 
 set_stability = 0.14
 set_war_support = 0.88
@@ -27,7 +28,7 @@ load_oob = UKR_1936
 set_research_slots = 1
 
 add_ideas = {
-	fffffff
+	idea_UKR_agricultural_economics
 }
 
 
