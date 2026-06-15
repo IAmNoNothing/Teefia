@@ -27,8 +27,13 @@ load_oob = UKR_1936
 
 set_research_slots = 1
 
+set_convoys = 5
+
 add_ideas = {
-	idea_UKR_agricultural_economics
+	idea_UKR_breadbasket_without_master
+	idea_UKR_army_without_state
+	idea_UKR_fractured_nation
+	idea_UKR_empty_treasury
 }
 
 
@@ -59,11 +64,14 @@ set_party_name = {
 
 set_technology = {
 	infantry_weapons = 1
-	tech_trucks = 1
+	early_fighter = 1
 	gw_artillery = 1
-	interwar_antiair = 1
-	tech_support = 1		
-	tech_engineers = 1
-	tech_mountaineers = 1
-	basic_train = 1
+	construction1 = 1
+	dispersed_industry = 1
+	fuel_silos = 1
+	tech_support = 1
+	transport = 1
+	early_ship_hull_light = 1
 }
+
+set_grand_doctrine = grand_battleplan
