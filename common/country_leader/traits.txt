@@ -45,4 +45,7 @@ leader_traits = {
 		political_power_gain = 0.1
 		experience_loss_factor = -0.25
 	}
+
+	# = UKR =
+
 }

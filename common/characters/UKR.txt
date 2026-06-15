@@ -1,4 +1,18 @@
 characters = {
-#Стартовий лідер - Нектаренко	
-	UKR
+	#Стартовий лідер - Нектарин	
+	UKR_nektarin_the_great = {
+		name = UKR_nektarin_the_great
+		portraits = {
+			civilian = {
+				large = GFX_portrait_UKR_nektarin_the_great
+			}
+			army = {
+				GFX_portrait_UKR_nektarin_the_great
+			}
+		}
+		country_leader = {
+			ideology = democratic
+			traits = { retired_officer }
+		}
+	}
 }

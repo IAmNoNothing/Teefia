@@ -272,17 +272,15 @@
   DIY_encourage_population_growth_idea: "Заохочення зростання населення"
   DIY_domestic_tank_production: "Виробництво танків всередині країни"
 
-  UKR_Mikola_Tarasenko: "Микола Тарасенко"
-
-  UKR_Gimler_Molodshiy: "Гімлер Молодший"
-  UKR_Taras_Bulbulyator:  "Тарас Бульбулятор"
-  UKR_Ivan_Nektarenko:  "Іван Нектаренко"
-  UKR_neutral_party_name_long: "Українська консерваторна партія"
-  UKR_neutral_party_name_short: "УКП"
-  UKR_communism_party_name_long: "Українсько-совєтська партія"
+  UKR_nektarin_the_great: "Олексій Нектаринов"
+  
+  UKR_neutral_party_name_long: "Партія національної єдності"
+  UKR_neutral_party_name_short: "ПНЄ"
+  UKR_communism_party_name_long: "Харківська організація революціонерів"
   UKR_communism_party_name_short: "УСП"
-  UKR_fascism_party_name_long: "Українська націоналістична партія"
-  UKR_fascism_party_name_short: "УНП"
-  UKR_democratic_party_name_long: "Українська пососна партія"
-  UKR_democratic_party_name_short: "УПП"
+  UKR_fascism_party_name_long: "Київська спілка народного відродження"
+  UKR_fascism_party_name_short: "КСНВ"
+  UKR_democratic_party_name_long: "Українські повстанці"
+  UKR_democratic_party_name_short: "УП"
+  
   UKR_question_of_legitimacy: "Питання легітимності"
