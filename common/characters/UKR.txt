@@ -6,12 +6,9 @@ characters = {
 			civilian = {
 				large = GFX_portrait_UKR_nektarin_the_great
 			}
-			army = {
-				GFX_portrait_UKR_nektarin_the_great
-			}
 		}
 		country_leader = {
-			ideology = democratic
+			ideology = liberalism
 			traits = { retired_officer }
 		}
 	}
