@@ -6,15 +6,15 @@ focus_tree = {
 			add = 100
 			original_tag = UKR
 		}
-	 }
+	}
 
-	 default = no
+	default = no
 	reset_on_civilwar = no
 	continuous_focus_position = {
 		x = 10
 		y = 2500
 	}
-#фокуси дипломатії - основні
+	#фокуси основні
 	focus = {
 		id = UKR_question_of_legitimacy
 		x = 13
@@ -22,6 +22,25 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			add_political_power = 150
-			}
 		}
 	}
+	#фокуси армії
+	focus = {
+		id = UKR_military_awakening #Військове пробудження
+		icon = GFX_focus_generic_army_reorganization
+		x = 3
+		y = 0
+		cost = 10
+		completion_reward = {
+			army_experience = 25
+			air_experience = 15
+			navy_experience = 15
+		}
+	}
+	#фокуси авіації
+
+	#фокуси флоту
+	#фокуси альянсу
+
+
+}
