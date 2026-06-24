@@ -14,10 +14,99 @@ focus_tree = {
 		x = 10
 		y = 2500
 	}
-	#фокуси основні
+	#гілка нектарина і тд
 	focus = {
-		id = UKR_question_of_legitimacy
+		id = UKR_uryad_nektarina #уряд нектарина
+		x = 9
+		mutually_exclusive = { focus = UKR_plan_v }
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = UKR_komisiya_dlya_komisiy #комісія по створенню комісій
+		prerequisite = { focus = UKR_uryad_nektarina }
+		x = 7
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = UKR_optimizuvaty_burokratiu #оптимізувати бюрократію
+		prerequisite = { focus = UKR_uryad_nektarina }
+		x = 5
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = UKR_vivchity_teefiu #вивчення теефії ближче
+		prerequisite = { focus = UKR_komisiya_dlya_komisiy }
+		prerequisite = { focus = UKR_optimizuvaty_burokratiu }
+		x = 6
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = UKR_pidtrymaty_vovu #підтримати вову - перс буде
+		prerequisite = { focus = UKR_plan_v focus = UKR_uryad_nektarina}
+		mutually_exclusive = { focus = UKR_vova_ide_plakat focus = UKR_daty_vovi_kyorher }
+		x = 15
+		y = 1.5
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = UKR_vova_ide_plakat #вова йде на хй
+		prerequisite = { focus = UKR_plan_v focus = UKR_uryad_nektarina}
+		mutually_exclusive = { focus = UKR_pidtrymaty_vovu focus = UKR_daty_vovi_kyorher }
 		x = 13
+		y = 1.5
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = UKR_daty_vovi_kyorher #дати вові кьорхер
+		prerequisite = { focus = UKR_plan_v focus = UKR_uryad_nektarina}
+		mutually_exclusive = { focus = UKR_pidtrymaty_vovu focus = UKR_vova_ide_plakat }
+		x = 17
+		y = 1.5
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = UKR_lois_zamist_zbroi #лойс замість зброї
+		prerequisite = { focus = UKR_uryad_nektarina }
+		x = 9
+		y = 2.5
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	
+	
+	focus = {
+		id = UKR_plan_v #план В
+		icon = GFX_goal_generic_special_forces
+		mutually_exclusive = { focus = UKR_uryad_nektarina }
+		x = 23
 		y = 0
 		cost = 10
 		completion_reward = {
@@ -28,7 +117,8 @@ focus_tree = {
 	focus = {
 		id = UKR_military_awakening #Військове пробудження
 		icon = GFX_focus_generic_army_reorganization
-		x = 3
+		x = 30
+		
 		y = 0
 		cost = 10
 		completion_reward = {

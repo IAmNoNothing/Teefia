@@ -2,20 +2,20 @@ capital = 201
 
 set_politics = {
 	ruling_party = democratic
-	elections_allowed = yes
+	elections_allowed = no
 	election_frequency = 48
 }
 
 set_popularities = {
 	neutrality = 55
 	communism = 15
-	democratic = 25
 	fascism = 5
+	democratic = 25
 }
 
 
-set_stability = 0.40
-set_war_support = 0.10
+set_stability = 0.3
+set_war_support = 0
 
 recruit_character = UKR_nektarin_the_great
 
@@ -27,10 +27,11 @@ set_research_slots = 1
 set_convoys = 5
 
 add_ideas = {
-	idea_UKR_breadbasket_without_master
-	idea_UKR_army_without_state
-	idea_UKR_fractured_nation
-	idea_UKR_empty_treasury
+	idea_UKR_nektarinov_government
+	idea_UKR_autonomy_on_paper
+	idea_UKR_deep_concern
+	idea_UKR_dnipro_question
+
 }
 
 

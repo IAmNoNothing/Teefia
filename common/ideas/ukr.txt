@@ -1,66 +1,64 @@
 ideas = {
     country = {
         #Стартові ідеї
-        idea_UKR_breadbasket_without_master = {
-
+        idea_UKR_nektarinov_government = {
+            picture = GFX_idea_nektarin
             modifier = {
-                consumer_goods_factor = 0.10
-                industrial_capacity_factory = -0.15
-                industrial_capacity_dockyard = -0.20
-                stability_factor = -0.05
+                stability_factor = 0.10
+                political_power_gain = -0.1
+                drift_defence_factor = 0.1
             }
         }
-        idea_UKR_army_without_state = {
+        idea_UKR_dnipro_question = {
+            picture = GFX_goal_generic_diplomacy
 
             modifier = {
-                training_time_factor = 0.15
-                army_core_defence_factor = 0.10
-                production_speed_arms_factory_factor = -0.10
+
+                stability_factor = -0.03
+
+                war_support_factor = -0.04
+
+                political_power_gain = -0.03
+
+                justify_war_goal_time = 0.08
+
+                army_org_factor = -0.02
+
+                surrender_limit = -0.03
 
             }
         }
-        idea_UKR_fractured_nation = {
+        idea_UKR_autonomy_on_paper = {
+            picture = GFX_goal_generic_constitution
 
             modifier = {
-                stability_factor = -0.08
-                political_power_factor = -0.10
+
+                production_speed_buildings_factor = -0.05
+
+                production_factory_efficiency_gain_factor = -0.04
+
+                consumer_goods_factor = 0.03
+
             }
         }
-        idea_UKR_empty_treasury = {
+        idea_UKR_deep_concern = {
+            picture = GFX_goal_generic_political_pressure
 
             modifier = {
-                consumer_goods_factor = 0.15
-                production_speed_buildings_factor = -0.20
-                trade_opinion_factor = -0.10
+
+                stability_factor = 0.03
+
+                war_support_factor = -0.05
+
+                army_attack_factor = -0.03
+
+                navy_attack_factor = -0.03
+
             }
         }
         #Ідеї які можна набути        
-        idea_UKR_agrarian_power = {
 
-            modifier = {
-                trade_opinion_factor = 0.15
-                stability_factor = 0.08
-                conscription = 0.03
-                industrial_capacity_factory = 0.05
-            }
-        }
-        idea_UKR_spirit_of_upa = {
-
-            modifier = {
-                army_infantry_attack_factor = 0.15
-                army_infantry_defence_factor = 0.20
-                attrition = -0.10
-                supply_consumption_factor = -0.10
-                production_speed_arms_factory_factor = -0.10
-            }
-        }
-        idea_UKR_hetman_will = {
-
-            modifier = {
-                stability_factor = 0.15
-                democratic_drift = -0.10
-                communism_drift = -0.10
-            }
-        }
+            
+        
     }
 }
