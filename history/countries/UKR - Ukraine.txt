@@ -14,9 +14,8 @@ set_popularities = {
 }
 
 
-set_stability = 0.3
-set_war_support = 0
-
+set_stability = 0.6
+set_war_support = 3
 recruit_character = UKR_nektarin_the_great
 
 
@@ -28,8 +27,8 @@ set_convoys = 5
 
 add_ideas = {
 	idea_UKR_nektarinov_government
-	idea_UKR_autonomy_on_paper
 	idea_UKR_deep_concern
+	idea_UKR_autonomy_on_paper
 	idea_UKR_dnipro_question
 
 }
@@ -64,11 +63,6 @@ set_technology = {
 	infantry_weapons = 1
 	early_fighter = 1
 	gw_artillery = 1
-	construction1 = 1
-	dispersed_industry = 1
-	fuel_silos = 1
-	tech_support = 1
-	transport = 1
 	early_ship_hull_light = 1
 }
 

@@ -13,47 +13,31 @@ ideas = {
             picture = GFX_goal_generic_diplomacy
 
             modifier = {
-
-                stability_factor = -0.03
-
-                war_support_factor = -0.04
-
-                political_power_gain = -0.03
-
-                justify_war_goal_time = 0.08
-
-                army_org_factor = -0.02
-
-                surrender_limit = -0.03
-
+                stability_factor = -0.20
+                war_support_factor = -0.1
+                political_power_gain = -0.1
+                justify_war_goal_time = 0.30
+                army_org_factor = -0.1
+                surrender_limit = -0.2
             }
         }
         idea_UKR_autonomy_on_paper = {
             picture = GFX_goal_generic_constitution
 
             modifier = {
-
-                production_speed_buildings_factor = -0.05
-
-                production_factory_efficiency_gain_factor = -0.04
-
-                consumer_goods_factor = 0.03
-
+                production_speed_buildings_factor = -0.1
+                production_factory_efficiency_gain_factor = -0.2
+                consumer_goods_factor = 0.15
             }
         }
         idea_UKR_deep_concern = {
             picture = GFX_goal_generic_political_pressure
 
             modifier = {
-
-                stability_factor = 0.03
-
-                war_support_factor = -0.05
-
-                army_attack_factor = -0.03
-
-                navy_attack_factor = -0.03
-
+                stability_factor = -0.2
+                war_support_factor = -0.2
+                army_attack_factor = -0.3
+                conscription_factor = -0.8
             }
         }
         #Ідеї які можна набути        

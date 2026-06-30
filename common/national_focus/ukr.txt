@@ -11,7 +11,7 @@ focus_tree = {
 	default = no
 	reset_on_civilwar = no
 	continuous_focus_position = {
-		x = 10
+		x = 25
 		y = 2500
 	}
 	#гілка нектарина і тд
@@ -101,22 +101,24 @@ focus_tree = {
 	}
 	
 	
-	
+#_____________________________________________________________________________#
+	#Дерево План В
 	focus = {
 		id = UKR_plan_v #план В
 		icon = GFX_goal_generic_special_forces
 		mutually_exclusive = { focus = UKR_uryad_nektarina }
-		x = 23
+		x = 30
 		y = 0
 		cost = 10
 		completion_reward = {
 			add_political_power = 150
 		}
 	}
+#_____________________________________________________________________________#
 	#фокуси армії
 	focus = {
 		id = UKR_military_awakening #Військове пробудження
-		icon = GFX_focus_generic_army_reorganization
+		icon = 
 		x = 30
 		
 		y = 0

@@ -3,8 +3,4 @@ spriteTypes = {
 		name = "GFX_portrait_UKR_nektarin_the_great"
 		textureFile = "gfx/leaders/UKR/nektarin_the_great.tga"
 	}
-	spriteType = {
-		name = "GFX_idea_nektarin"
-		textureFile = "gfx/ideas/idea_nektain.tga"
-	}
 }
